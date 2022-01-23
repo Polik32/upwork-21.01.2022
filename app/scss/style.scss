@@ -4,4 +4,44 @@
 @import 'libs';
 @import 'global';
 
+.header{
+    &__inner{
+        display: flex;
+    } 
+}
 
+
+
+.apartment{
+    &__images{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__raiting-wrapper{
+        width: 100%;
+    }
+    &__title{
+        width: 90%;
+    }
+    &__price{
+        display: flex;
+    }
+}
+
+
+.footer{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__copyright-inner{
+        display: flex;
+    }
+    &__info{
+        display: flex;
+    }
+}
