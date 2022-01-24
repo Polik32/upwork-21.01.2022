@@ -32,6 +32,110 @@
     }
 }
 
+.about{
+    &__service-item{
+        position: relative;
+    }
+    &__service-item::before{
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position:absolute;
+    }
+    &__service-kitchen, 
+    &__service-breakfast,
+    &__service-tv,
+    &__service-parking,
+    &__service-laptop,
+    &__service-washer,
+    &__service-aid,
+    &__service-wifi,
+    &__service-restaurant,
+    &__service-business,
+    &__service-terrace,
+    &__service-concierge{
+        background-repeat: no-repeat;
+        background-position: 0 0 0 17px;
+        padding-left: 37px;
+    }
+    &__service-kitchen{
+        background-image: url(../images/about-services/kitchen.svg);
+    }
+    &__service-breakfast{
+        background-image: url(../images/about-services/breakfast.svg);
+    }
+    &__service-tv{
+        background-image: url(../images/about-services/tv.svg);
+    }
+    &__service-parking{
+        background-image: url(../images/about-services/parking.svg);
+    }
+    &__service-laptop{
+        background-image: url(../images/about-services/laptop.svg);
+    }
+    &__service-washer{
+        background-image: url(../images/about-services/washer.svg);
+    }
+    &__service-aid{
+        background-image: url(../images/about-services/aid.svg);
+    }
+    &__service-wifi{
+        background-image: url(../images/about-services/wifi.svg);
+    }
+    &__service-restaurant{
+        background-image: url(../images/about-services/restaurant.svg);
+    }
+    &__service-business{
+        background-image: url(../images/about-services/business-center.svg);
+    }
+    &__service-terrace{
+        background-image: url(../images/about-services/terrace.svg);
+    }
+    &__service-concierge{
+        background-image: url(../images/about-services/concierge.svg);
+    }
+}
+
+
+.property{
+    &__items{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-title{
+        position: relative;
+    }
+    &__item-title::before{
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position:absolute;
+    }
+    &__item-nearby,
+    &__item-attractions,
+    &__item-stores{
+        background-repeat: no-repeat;
+        background-position: 0 0 0 7px;
+        padding-left: 27px;
+    }
+    &__item-nearby{
+        background-image: url(../images/property-surroundings/nearby.svg);
+    }
+    &__item-attractions{
+        background-image: url(../images/property-surroundings/attractions.svg);
+    }
+    &__item-stores{
+        background-image: url(../images/property-surroundings/stores-transports.svg);
+    }
+    &__item-location{
+        display: flex;
+    }
+}
+
 
 .footer{
     &__inner{
@@ -45,3 +149,9 @@
         display: flex;
     }
 }
+
+
+
+
+
+@import 'media';
