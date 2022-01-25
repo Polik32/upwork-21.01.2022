@@ -12,13 +12,13 @@
 <header class="header">
     <div class="container">
         <div class="header__inner">
-            <a class="logo" href="#">
+            <a class="header__logo" href="#">
                 <img src="images/logo.svg" alt="logo">
             </a>
             <form class="header__form">
                 <input class="header__form-location" type="text" placeholder="Start typing..." value="Philadelphia">
-                <input class="header__form-from" type="date">
-                <input class="header__form-by" type="date">
+                <input class="header__form-from"  type="date" data-date="" data-date-format="DD MMMM">
+                <input class="header__form-by" type="date" data-date="" data-date-format="DD MMMM">
                 <input class="header__form-guests" type="text" placeholder="Guests">
             </form>
             <a class="header__user" href="#">
@@ -777,7 +777,7 @@
             </div>
     </div>
 </footer>
-    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 <script src="js/main.min.js"></script>    
 </body>
 </html>

@@ -39,3 +39,11 @@ $('.availability__check-inner .availability__check-quantity').bind("change keyup
       this.value = parseInt($(this).data('max-count'));
   }    
 });    
+
+$("input").on("change", function() {
+  this.setAttribute(
+      "data-date",
+      moment(this.value, "YYYY-MM-DD")
+      .format( this.getAttribute("data-date-format") )
+  )
+}).trigger("change");

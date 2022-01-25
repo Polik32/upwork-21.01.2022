@@ -11,16 +11,27 @@
         display: flex;
         padding: 14px 0 16px 0;
     }
+    &__logo{
+        max-width: 44px;
+    }
     &__form{
         margin-left: 17px;
+        margin-right: 321px;
         border: 1px solid #EDE8E9;
         border-radius: 8px;
         max-width: 718px;
+    }
+    &__form-from{
+        max-width: 145px;
+    }
+    &__form-by{
+        max-width: 145px;
     }
     &__form-location{
         @extend %inter-bold;
         font-size: 14px;
         @extend %color-bold;
+        max-width: 271px;
         padding: 12px 167px 11px 20px;
     }
     &__form-guests{
@@ -28,6 +39,7 @@
         font-size: 14px;
         line-height: 21px;
         @extend %color-light;
+        max-width: 154px;
         padding: 12px 86px 11px 19.5px;
     } 
 }
