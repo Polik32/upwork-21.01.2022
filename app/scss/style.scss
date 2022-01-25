@@ -5,8 +5,30 @@
 @import 'global';
 
 .header{
+    width: 100%;
+    box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.15);
     &__inner{
         display: flex;
+        padding: 14px 0 16px 0;
+    }
+    &__form{
+        margin-left: 17px;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        max-width: 718px;
+    }
+    &__form-location{
+        @extend %inter-bold;
+        font-size: 14px;
+        @extend %color-bold;
+        padding: 12px 167px 11px 20px;
+    }
+    &__form-guests{
+        @extend %inter-bold;
+        font-size: 14px;
+        line-height: 21px;
+        @extend %color-light;
+        padding: 12px 86px 11px 19.5px;
     } 
 }
 
@@ -154,6 +176,9 @@
     //         display: block;
     //     }
     // }
+    &__item{
+        cursor: pointer;
+    }
     &__item-info{
         position: relative;
         display: none;
@@ -185,6 +210,112 @@
     }
     &__item-prepayment{
         background-image: url(../images/availability/prepayment.svg);
+    }
+    &__check-quantity{
+        max-width: 50px;
+    }
+    &__check-date{
+        display: flex;
+    }
+    &__check-guest{
+        display: flex;
+    }
+    &__user-wrapper{
+        display: flex;
+    }
+}
+
+.rules{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-wrapperTitle{
+        position: relative;
+    }
+    &__item-wrapperTitle::before{
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position:absolute;
+    }
+    &__item-checkIn,
+    &__item-pets,
+    &__item-policies,
+    &__item-checkOut,
+    &__item-cancellation,
+    &__item-cot,
+    &__item-cards,
+    &__item-age,
+    &__item-groups{
+        background-repeat: no-repeat;
+        background-position: 0 0 0 7px;
+        padding-left: 27px;
+    }
+    &__item-checkIn{
+        background-image: url(../images/rules/check-in.svg);
+    }
+    &__item-pets{
+        background-image: url(../images/rules/pets.svg);
+    }
+    &__item-policies{
+        background-image: url(../images/rules/child-policies.svg);
+    }
+    &__item-checkOut{
+        background-image: url(../images/rules/check-out.svg);
+    }
+    &__item-cancellation{
+        background-image: url(../images/rules/cancellation-prepayment.svg);
+    }
+    &__item-cot{
+        background-image: url(../images/rules/cot.svg);
+    }
+    &__item-cards{
+        background-image: url(../images/rules/cards.svg);
+    }
+    &__item-age{
+        background-image: url(../images/rules/age.svg);
+    }
+    &__item-groups{
+        background-image: url(../images/rules/groups.svg);
+    }
+}
+
+.reviews{
+    &__wrapper{
+        display: flex;
+    }
+}
+
+.slider{
+    &__info{
+        display: flex;
+    }
+    &__info-raiting{
+        display: flex;
+    }
+}
+
+.comment{
+    &__header{
+        display: flex;
+    }
+    &__raiting{
+        display: flex;
+    }
+    &__author{
+        display: flex;
+    }
+}
+
+.progress{
+    &____items{
+        display: flex;
+    }
+    &__item{
+        display: flex;
     }
 }
 

@@ -11,3 +11,31 @@ function f_acc(){
     $(this).next().slideToggle(2000);
 }
 
+//*****************************************************************/ 
+
+// Убавляем кол-во по клику
+$('.availability__check-inner .availability__check-btminus').on('click', function() {
+  let $input = $(this).parent().find('.availability__check-quantity');
+  let count = parseInt($input.val()) - 1;
+  count = count < 1 ? 1 : count;
+  $input.val(count);
+});
+// Прибавляем кол-во по клику
+$('.availability__check-inner .availability__check-btplus').on('click', function() {
+  let $input = $(this).parent().find('.availability__check-quantity');
+  let count = parseInt($input.val()) + 1;
+  count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+  $input.val(parseInt(count));
+}); 
+// Убираем все лишнее и невозможное при изменении поля
+$('.availability__check-inner .availability__check-quantity').bind("change keyup input click", function() {
+  if (this.value.match(/[^0-9]/g)) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+  }
+  if (this.value == "") {
+      this.value = 1;
+  }
+  if (this.value > parseInt($(this).data('max-count'))) {
+      this.value = parseInt($(this).data('max-count'));
+  }    
+});    

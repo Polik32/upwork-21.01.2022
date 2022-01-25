@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Listing</title>
 </head>
@@ -16,9 +17,9 @@
             </a>
             <form class="header__form">
                 <input class="header__form-location" type="text" placeholder="Start typing..." value="Philadelphia">
-                <input type="date">
-                <input type="date">
-                <input type="text" placeholder="Guests">
+                <input class="header__form-from" type="date">
+                <input class="header__form-by" type="date">
+                <input class="header__form-guests" type="text" placeholder="Guests">
             </form>
             <a class="header__user" href="#">
                 <img src="images/user-avatar.png" alt="avatar">
@@ -273,6 +274,7 @@
 <section class="availability">
     <div class="container">
         <div class="availability__inner">
+            <h4 class="availability__title">Availability</h4>
             <div class="availability__options">
                 <div class="availability__item">
                     <div class="availability__title-wrap">
@@ -372,12 +374,308 @@
                 </div>
             </div>
             <div class="availability__check">
-
+                <div class="availability__check-wrapper">
+                    <p class="availability__check-title">Check availability</p>
+                    <div class="availability__check-dateIn">
+                        <p class="availability__check-text">Date in</p>
+                        <input type="date">
+                    </div>
+                    <div class="availability__check-dareOut">
+                        <p class="availability__check-text">Date out</p>
+                        <input type="date">
+                    </div>
+                    <div class="availability__check-date">
+                        <div class="availability__check-name">
+                            <p class="availability__check-roomsNumber">Rooms number</p>
+                            <h4 class="availability__check-titleNumber">Rooms</h4>
+                        </div>
+                        <div class="availability__check-inner">        
+                            <button class="availability__check-btminus">-</button>
+                            <input class="availability__check-quantity" type="text" value="1" data-max-count="50">
+                            <button class="availability__check-btplus">+</button>
+                        </div>
+                    </div>
+                    <div class="availability__check-guest">
+                        <div class="availability__check-name">
+                            <p class="availability__check-guestNumber">Guests number</p>
+                            <h4 class="availability__check-titleNumber">Guest</h4>
+                        </div>
+                        <div class="availability__check-inner">        
+                            <button class="availability__check-btminus">-</button>
+                            <input class="availability__check-quantity" type="text" value="1" data-max-count="50">
+                            <button class="availability__check-btplus">+</button>
+                        </div>
+                    </div>
+                    <div class="availability__user">
+                        <p class="availability__user-text">Hosted by</p>
+                        <div class="availability__user-wrapper">
+                            <img class="availability__user-avatar" src="images/user-avatar.png" alt="avatar">
+                            <div class="availability__user-info">
+                                <h4 class="availability__user-name">Jushawn McDowell</h4>
+                                <p class="availability__user-info">Joined in 2016</p>
+                            </div>
+                            <img class="availability__check-verified" src="images/availability/verified-icon.png" alt="verified">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>    
     </div>
 </section>
-
+<section class="rules">
+    <div class="container">
+        <div class="rules__inner">
+            <h4 class="rules__title">Apartment rules</h4>
+            <p class="rules__text">Guests are required to show a photo identification and credit card upon check-in.
+                                  Please note that all Special Requests are subject to availability and additional charges may apply.</p>
+        </div>
+        <div class="rules__wrapper">
+            <div class="rules__part-first">
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-checkIn">Check-in</h6>
+                    </div>
+                    <div class="rules__item-info">
+                        <p class="rules__item-text">From 14:00 hours</p>
+                        <progress></progress>
+                    </div>
+                </div>
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-pets">Pets</h6>
+                    </div>
+                    <p class="rules__item-text">Pets are not allowed</p>
+                </div>
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-policies">Child policies</h6>
+                    </div>
+                    <p class="rules__item-text">To see correct prices and occupancy, please add the number of children.
+                                                Children aged 12 years and above are considered adults at this property.</p>
+                </div>
+            </div>
+            <div class="rules__part-second">
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-checkOut">Check-out</h6>
+                    </div>
+                    <div class="rules__item-info">
+                        <p class="rules__item-text">Until 12:00 hours</p>
+                        <progress></progress>
+                    </div>
+                </div>
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-cancellation">Cancellation / prepayment</h6>
+                    </div>
+                    <p class="rules__item-text">Cancellation and prepayment policies vary according to accommodation type. Please check what conditions may apply.</p>
+                </div>
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-cot">Cot and extra bed policies</h6>
+                    </div>
+                    <p class="rules__item-text">There is no capacity for extra beds and cots at this property.</p>
+                </div>
+            </div>
+            <div class="rules__part-third">
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-cards">Cards accepted at this hotel</h6>
+                    </div>
+                    <p class="rules__item-text">Room accepts these cards and reserves the right to temporarily hold an amount prior to arrival.</p>
+                </div>
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-age">Age restriction</h6>
+                    </div>
+                    <p class="rules__item-text">The minimum age for check-in is 18</p>
+                </div>
+                <div class="rules__item">
+                    <div class="rules__item-wrapperTitle">
+                        <h6 class="rules__item-groups">Groups</h6>
+                    </div>
+                    <p class="rules__item-text">When booking more than 5 rooms, different policies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="container">
+        <div class="reviews__inner">
+            <h4 class="reviews__title">Latest reviews</h4>
+            <div class="reviews__wrapper">
+            <div class="reviews__comments">
+                <div class="comment">
+                    <div class="comment__header">
+                        <h5 class="comment__title">Charming and comfortable house</h5>
+                        <div class="comment__raiting">
+                            <img class="comment__star" src="images/reviews/raiting.svg" alt="star">
+                            <p class="comment__raiting-info">4.91</p>
+                            <a class="comment__ellipsis" href="#">
+                                <img class="comment__ellipsis-img" src="images/reviews/ellipsis.svg" alt="ellipsis">
+                            </a>
+                        </div>
+                    </div>
+                        <p class="comment__text">Reviews on peer-to-peer sites can happen organically, often removing the company from the review process entirely.
+                                                 (This can be a nightmare if you’re managing a small business, since one bad review can have a huge impact,
+                                                 but this also makes the reviews seem more authentic.)</p>
+                        <div class="comment__author">
+                            <img class="comment__author-avatar" src="images/reviews/avatar-1.png" alt="avatar">
+                            <div class="comment__author-info">
+                                <h6 class="comment__author-name">Jushawn McDowell</h6>
+                                <p class="comment__author-date">Jun 03-10, 2020</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="comment">
+                    <div class="comment__header">
+                        <h5 class="comment__title">Hideaway tent with pool and tub</h5>
+                        <div class="comment__raiting">
+                            <img class="comment__star" src="images/reviews/raiting.svg" alt="star">
+                            <p class="comment__raiting-info">4.8</p>
+                            <a class="comment__ellipsis" href="#">
+                                <img class="comment__ellipsis-img" src="images/reviews/ellipsis.svg" alt="ellipsis">
+                            </a>
+                        </div>
+                    </div>
+                        <p class="comment__text">You might be on multiple social media platforms, so how can you keep track of all these messages?
+                                                 If you’re providing omnichannel customer service, you might already be using a tool that can consolidate
+                                                 all your customer conversations and communication channels into one handy dashboard.</p>
+                        <div class="comment__author">
+                            <img class="comment__author-avatar" src="images/reviews/avatar-2.png" alt="avatar">
+                            <div class="comment__author-info">
+                                <h6 class="comment__author-name">Joana Leite</h6>
+                                <p class="comment__author-date">Jun 03-10, 2020</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="comment">
+                    <div class="comment__header">
+                        <h5 class="comment__title">Charming and comfortable house</h5>
+                        <div class="comment__raiting">
+                            <img class="comment__star" src="images/reviews/raiting.svg" alt="star">
+                            <p class="comment__raiting-info">4.96</p>
+                            <a class="comment__ellipsis" href="#">
+                                <img class="comment__ellipsis-img" src="images/reviews/ellipsis.svg" alt="ellipsis">
+                            </a>
+                        </div>
+                    </div>
+                        <p class="comment__text">We list customer quotes as the easiest type of review to get because they involve very little effort for you and your customer. 
+                                                 Because you’re in control of adding them to your website, all you need to do is ask your customers to share their experience
+                                                 in an email, in person, or over the phone.</p>
+                        <div class="comment__author">
+                            <img class="comment__author-avatar" src="images/reviews/avatar-3.png" alt="avatar">
+                            <div class="comment__author-info">
+                                <h6 class="comment__author-name">Alexa Tenorio</h6>
+                                <p class="comment__author-date">Jun 03-10, 2020</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="reviews__score">
+                <div class="reviews__score-header">
+                    <div class="reviews__wrapper">
+                        <img class="reviews__score-star" src="images/reviews/raiting.svg" alt="star">
+                        <p class="reviews__score-raiting">4.96</p>
+                    </div>
+                    <p class="reviews__score-based">Average score based on 235 reviews</p>
+                </div>
+                <div class="reviews__score-progress">
+                    <div class="progress__items">
+                        <div class="progress__item">
+                            <div class="progress__item-info">
+                                <h5 class="progress__item-name">Positive</h5>
+                                <p class="progress__item-starAmount">4 stars and above</p>
+                            </div>
+                            <div class="progress__item-percent">
+                                <p>80%</p>
+                                <progress></progress>
+                            </div>
+                        </div>
+                        <div class="progress__item">
+                            <div class="progress__item-info">
+                                <h5 class="progress__item-name">Neutral</h5>
+                                <p class="progress__item-starAmount">3 stars and above</p>
+                            </div>
+                            <div class="progress__item-percent">
+                                <p>15%</p>
+                                <progress></progress>
+                            </div>
+                        </div>
+                        <div class="progress__item">
+                            <div class="progress__item-info">
+                                <h5 class="progress__item-name">Negative</h5>
+                                <p class="progress__item-starAmount">under 2 start</p>
+                            </div>
+                            <div class="progress__item-percent">
+                                <p>5%</p>
+                                <progress></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</section>
+<section class="slider">
+    <div class="container">
+        <div class="slider__inner">
+            <h4 class="slider__title">Popular aparments near you</h4>
+            <div class="slider__wrapper">
+                <div class="slider__items">
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/content/slider/slide-1.png" alt="slider-image">
+                        <div class="slider__header">
+                            <h5 class="slider__header-title">Charming and comfortable house</h5>
+                            <p class="slider__header-text">Entire apartment in Istambul</p>
+                        </div>
+                        <div class="slider__info">
+                            <p class="slider__info-price">$11 / night</p>
+                            <div class="slider__info-raiting">
+                                <img class="slider__info-star" src="images/reviews/raiting.svg" alt="raiting">
+                                <p class="slider__info-score">4.91</p>
+                                <p class="slider__info-reviews">(98)</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/content/slider/slide-2.png" alt="slider-image">
+                        <div class="slider__header">
+                            <h5 class="slider__header-title">Cozy apartment at Hippodrome</h5>
+                            <p class="slider__header-text">Entire apartment in Batumi</p>
+                        </div>
+                        <div class="slider__info">
+                            <p class="slider__info-price">$18 / night</p>
+                            <div class="slider__info-raiting">
+                                <img class="slider__info-star" src="images/reviews/raiting.svg" alt="raiting">
+                                <p class="slider__info-score">4.65</p>
+                                <p class="slider__info-reviews">(93)</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/content/slider/slide-3.png" alt="slider-image">
+                        <div class="slider__header">
+                            <h5 class="slider__header-title">Dream house</h5>
+                            <p class="slider__header-text">Shared room in Madrid</p>
+                        </div>
+                        <div class="slider__info">
+                            <p class="slider__info-price">$21 / night</p>
+                            <div class="slider__info-raiting">
+                                <img class="slider__info-star" src="images/reviews/raiting.svg" alt="raiting">
+                                <p class="slider__info-score">4.55</p>
+                                <p class="slider__info-reviews">(35)</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <footer class="footer">
     <div class="container">
         <div class="footer__inner">
