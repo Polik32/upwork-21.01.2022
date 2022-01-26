@@ -20,19 +20,99 @@
         border: 1px solid #EDE8E9;
         border-radius: 8px;
         max-width: 718px;
+        &:before{
+            position: absolute;
+            content: url(../images/line-form-header.svg);
+            top: 15px;
+            left: 480px;
+        }
+        &:after{
+            position: absolute;
+            content: url(../images/line-form-header.svg);
+            top: 15px;
+            left: 609px;
+        }
+    }
+    &__form-wrapper{
+        margin: 0;
+        padding: 0;
+    }
+    &__form-from,
+    &__form-by{ 
+        position: relative;
+        width: 104px;
+        height: 20px;
+        font-size: 14px;
+        top: 7px;
+        left: 10px;
+        @extend %inter-bold;
+        @extend %color-bold;
+        &:before{
+            position: absolute;
+            top: 0;
+            left: 20px;
+            content: attr(data-date);
+        }
+        &::-webkit-datetime-edit,
+        &::-webkit-inner-spin-button,
+        &::-webkit-clear-button{
+            display: none;
+        }
+        &::-webkit-calendar-picker-indicator{
+            position: absolute;
+            top: -3px;
+            right: 0;
+            opacity: 1;
+            content: url(../images/calendar-icon.svg);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        &::-moz-datetime-edit,
+        &::-moz-inner-spin-button,
+        &::-moz-clear-button{
+            display: none;
+        }
+        &::-moz-calendar-picker-indicator{
+            position: absolute;
+            top: -3px;
+            right: 0;
+            opacity: 1;
+            content: url(../images/calendar-icon.svg);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
     }
     &__form-from{
-        max-width: 145px;
+        left: 0;
     }
-    &__form-by{
-        max-width: 145px;
+    &__form-btn{
+        width: 34px;
+        height: 34px;
+        background: #EB5E55;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin-right: 5px;
+        &:hover{
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+        }
+        &::before{
+            content: url(../images/search-icon.svg);
+            left: 1px;
+            top: 1px;
+            right: 0;
+            bottom: 0;
+            position: relative;
+        }
     }
     &__form-location{
         @extend %inter-bold;
         font-size: 14px;
         @extend %color-bold;
         max-width: 271px;
-        padding: 12px 167px 11px 20px;
+        padding: 12px 67px 11px 20px;
     }
     &__form-guests{
         @extend %inter-bold;
@@ -40,7 +120,16 @@
         line-height: 21px;
         @extend %color-light;
         max-width: 154px;
-        padding: 12px 86px 11px 19.5px;
+        padding: 12px 46px 11px 19.5px;
+        text-align: center;
+    }
+    &__user{
+        &:before{
+            position: absolute;
+            content: url(../images/line-form-header.svg);
+            top: 15px;
+            left: 730px;
+        }
     } 
 }
 

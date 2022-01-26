@@ -33,43 +33,27 @@ input{
     outline-offset: 0;
 }
 
-input[type="date"]::-moz-datetime-edit-year-field,
-input[type="date"]::-webkit-datetime-edit-year-field{
-	display: none;
-  }
-
-// input::-webkit-calendar-picker-indicator {
-// 	display: none;
-// }
-
-input {
-    position: relative;
-    width: 150px; height: 20px;
-    color: white;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-input:before {
-    position: absolute;
-    top: 3px; left: 3px;
-    content: attr(data-date);
-    display: inline-block;
-    color: black;
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
 }
 
-input::-moz-datetime-edit, input::-moz-inner-spin-button, input::-moz-clear-button,
-input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
-    display: none;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-input::-moz-calendar-picker-indicator,
-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 3px;
-    right: 0;
-    color: black;
-    opacity: 1;
-}
-
+input:focus::-webkit-input-placeholder { color:transparent; }
 
 
 

@@ -38,7 +38,7 @@ $('.availability__check-inner .availability__check-quantity').bind("change keyup
   if (this.value > parseInt($(this).data('max-count'))) {
       this.value = parseInt($(this).data('max-count'));
   }    
-});    
+});
 
 $("input").on("change", function() {
   this.setAttribute(
@@ -46,4 +46,4 @@ $("input").on("change", function() {
       moment(this.value, "YYYY-MM-DD")
       .format( this.getAttribute("data-date-format") )
   )
-}).trigger("change");
+});
