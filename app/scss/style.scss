@@ -44,7 +44,7 @@
         height: 20px;
         font-size: 14px;
         top: 7px;
-        left: 10px;
+        left: 13px;
         @extend %inter-bold;
         @extend %color-bold;
         &:before{
@@ -136,9 +136,22 @@
 
 
 .apartment{
+    margin-top: 32px;
     &__images{
         display: flex;
         flex-wrap: wrap;
+        max-width: 1140px;
+        max-height: 488px;
+        object-fit: cover;
+    }
+    &__images-second{
+        max-width: 458px;
+        max-height: 230px;
+    }
+    &__images-third,
+    &__images-four{
+        width: 215px;
+        height: 230px;
     }
     &__info{
         display: flex;
