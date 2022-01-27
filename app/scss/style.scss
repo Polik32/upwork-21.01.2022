@@ -98,6 +98,9 @@
         &:hover{
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
         }
+        &:active{
+            background: #EB5E55;
+        }
         &::before{
             content: url(../images/search-icon.svg);
             left: 1px;
@@ -143,29 +146,187 @@
     &__info{
         display: flex;
         flex-wrap: wrap;
+        margin-top: 29px;
     }
     &__raiting-wrapper{
+        font-size: 14px;
+        line-height: 21px;
         width: 100%;
     }
+    &__raiting{
+        @extend %inter-bold;
+        @extend %color-bold;
+        padding-left: 4px;
+        &::before{
+            content: url(../images/apartment-star.svg);
+            top: 2px;
+            left: -4px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__mark{
+        @extend %inter-regular;
+        @extend %color-light;
+        padding-left: 5px;
+    }
+    &__name{
+        @extend %inter-regular;
+        @extend %color-light;
+        padding-left: 19px;
+        &::before{
+            content: url(../images/apartment-dot.svg);
+            top: -2px;
+            left: -12px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
     &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 34px;
+        line-height: 48px;
         width: 90%;
     }
     &__price{
         display: flex;
+        padding-top: 12px;
+    }
+    &__price-value{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    &__price-info{
+        @extend %inter-light;
+        @extend %color-light;
+        font-size: 16px;
+        line-height: 34px;
+        padding-left: 10px;
+        &::before{
+            content: '/';
+            top: 0;
+            left: -3px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+}
+
+.features{
+    &__wrapper{
+        &::before{
+            content: url(../images/big-line.svg);
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+    }
+    &__item{
+        display: flex;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__item-wrapper{
+        margin-left: 17px;
+    }
+    &__title{
+        @extend %inter-bold;
+        @extend %color-bold;
+    }
+    &__info{
+        @extend %inter-regular;
+        @extend %color-light;
+    }
+    &__logo-home,
+    &__logo-guests,
+    &__logo-bedrooms,
+    &__logo-policy{
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(0deg, rgba(198, 216, 211, 0.3), rgba(198, 216, 211, 0.3)), #FFFFFF;
+        border-radius: 4px;
+        &::before{
+            top: 14px;
+            left: 14px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__logo-home{
+        &::before{
+            content: url(../images/features-home.svg);
+        }
+    }
+    &__logo-guests{
+        &::before{
+            content: url(../images/features-guests.svg);
+        }
+    }
+    &__logo-bedrooms{
+        &::before{
+            content: url(../images/features-bedrooms.svg);
+        }
+    }
+    &__logo-policy{
+        &::before{
+            content: url(../images/features-policy.svg);
+            left: 16.5px;
+        }
     }
 }
 
 .about{
-    &__service-item{
-        position: relative;
+    &__inner{
+        display: flex;
+        margin-top: 83px;
     }
-    &__service-item::before{
-        content: '';
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        position:absolute;
+    &__services{
+        margin-top: 50px;
+        margin-bottom: 12px;
+    }
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 22px;
+        line-height: 32px;
+    }
+    &__text-wrapper{
+        margin-top: 12px;
+        max-width: 716px;
+    }
+    &__text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__services{
+        display: flex;
+        justify-content: space-between;
+        max-width: 675px;
+    }
+    &__service-item{
+        @extend %color-bold;
+        @extend %inter-regular;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 30px;
+        padding-left: 17px;
     }
     &__service-kitchen, 
     &__service-breakfast,
@@ -179,83 +340,203 @@
     &__service-business,
     &__service-terrace,
     &__service-concierge{
-        background-repeat: no-repeat;
-        background-position: 0 0 0 17px;
-        padding-left: 37px;
+        &::before{
+            top: 1px;
+            left: -17px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
     }
     &__service-kitchen{
-        background-image: url(../images/about-services/kitchen.svg);
+        &::before{
+            content: url(../images/about-services/kitchen.svg);
+        }
     }
     &__service-breakfast{
-        background-image: url(../images/about-services/breakfast.svg);
+        &::before{
+            content: url(../images/about-services/breakfast.svg);
+        }
     }
     &__service-tv{
-        background-image: url(../images/about-services/tv.svg);
+        &::before{
+            content: url(../images/about-services/tv.svg);
+        }
     }
     &__service-parking{
-        background-image: url(../images/about-services/parking.svg);
+        &::before{
+            content: url(../images/about-services/parking.svg);
+        }
     }
     &__service-laptop{
-        background-image: url(../images/about-services/laptop.svg);
+        &::before{
+            content: url(../images/about-services/laptop.svg);
+        }
     }
     &__service-washer{
-        background-image: url(../images/about-services/washer.svg);
+        &::before{
+            content: url(../images/about-services/washer.svg);
+        }
     }
     &__service-aid{
-        background-image: url(../images/about-services/aid.svg);
+        &::before{
+            content: url(../images/about-services/aid.svg);
+        }
     }
     &__service-wifi{
-        background-image: url(../images/about-services/wifi.svg);
+        &::before{
+            content: url(../images/about-services/wifi.svg);
+        }
     }
     &__service-restaurant{
-        background-image: url(../images/about-services/restaurant.svg);
+        &::before{
+            content: url(../images/about-services/restaurant.svg);
+        }
     }
     &__service-business{
-        background-image: url(../images/about-services/business-center.svg);
+        &::before{
+            content: url(../images/about-services/business-center.svg);
+        }
     }
     &__service-terrace{
-        background-image: url(../images/about-services/terrace.svg);
+        &::before{
+            content: url(../images/about-services/terrace.svg);
+        }
     }
     &__service-concierge{
-        background-image: url(../images/about-services/concierge.svg);
+        &::before{
+            content: url(../images/about-services/concierge.svg);
+        }
+    }
+    &__btn{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 14px 27.5px 11px 50.5px;
+        transition: background 0.3s;
+        &:hover{
+            color: #FFFFFF;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+            &::before{
+                content: url(../images/ellipsis-white.svg);
+                left: -10px;
+                top: -3px;
+                right: 0;
+                bottom: 0;
+                position:relative;
+            }
+            transition: background 0.3s;
+        }
+        &:active{
+            color: #FFFFFF;
+            background: #EB5E55;
+            transition: background 0.3s;
+        }
+        &::before{
+            content: url(../images/ellipsis.svg);
+            left: -10px;
+            top: -3px;
+            right: 0;
+            bottom: 0;
+            position:relative;
+        }
+    }
+    &__map{
+        margin-left:auto;
     }
 }
 
-
 .property{
+    margin-top: 34px;
+    &__wrapper{
+        &::before{
+            content: url(../images/big-line.svg);
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 29px;
+    }
+    &__text{
+        @extend %inter-regular;
+        @extend %color-light;
+        max-width: 914px;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 12px;
+    }
+    &__item{
+        min-width: 293px;
+        margin-bottom: 35px;
+    }
     &__items{
         display: flex;
         justify-content: space-between;
+        margin-top: 33px;
     }
     &__item-title{
-        position: relative;
-    }
-    &__item-title::before{
-        content: '';
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        position:absolute;
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 7px;
+        margin-bottom: 30px;
     }
     &__item-nearby,
     &__item-attractions,
     &__item-stores{
-        background-repeat: no-repeat;
-        background-position: 0 0 0 7px;
-        padding-left: 27px;
+        &::before{
+            top: 1px;
+            left: -7px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
     }
     &__item-nearby{
-        background-image: url(../images/property-surroundings/nearby.svg);
+        &::before{
+            content: url(../images/property-surroundings/nearby.svg);
+        }
     }
     &__item-attractions{
-        background-image: url(../images/property-surroundings/attractions.svg);
+        &::before{
+            content: url(../images/property-surroundings/attractions.svg);
+        }
     }
     &__item-stores{
-        background-image: url(../images/property-surroundings/stores-transports.svg);
+        &::before{
+            content: url(../images/property-surroundings/stores-transports.svg);
+        }
     }
     &__item-location{
         display: flex;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__location-name{
+        @extend %inter-regular;
+        @extend %color-bold;
+    }
+    &__location-distanations{
+        @extend %inter-regular;
+        @extend %color-light;
+        margin-left:auto;
+
     }
 }
 
@@ -277,40 +558,94 @@
     //         display: block;
     //     }
     // }
+    &__inner{
+        &::before{
+            content: url(../images/big-line.svg);
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 36px;
+    }
+    &__options{
+        margin-top: 22px;
+    }
     &__item{
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        max-width: 751px;
         cursor: pointer;
+        padding: 24px 25px 27px 53px;
+        margin-bottom: 10px;
+    }
+    &__title-wrap{
+        display: flex;
+    }
+    &__item-title{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+    }
+    &__item-price{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 16px;
+        margin-left: auto;
     }
     &__item-info{
-        position: relative;
         display: none;
+        &::before{
+            content: url(../images/small-line.svg);
+            top: 0;
+            left: -36px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
     }    
-    &__item-info::before{
-        content: '';
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        position:absolute;
-    }
     &__item-bed,
     &__item-space,
     &__item-cancellation,
     &__item-prepayment{
-        background-repeat: no-repeat;
-        background-position: 0 0 0 17px;
-        padding-left: 37px;
+        padding-left: 7px;
+        &::before{
+            top: 1px;
+            left: -17px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
     }
     &__item-bed{
-        background-image: url(../images/availability/bed.svg);
+        
+        &::before{
+            content: url(../images/availability/bed.svg);
+        }
     }
     &__item-space{
-        background-image: url(../images/availability/space.svg);
+        &::before{
+            content: url(../images/availability/space.svg);
+        }
     }
     &__item-cancellation{
-        background-image: url(../images/availability/cancellation.svg);
+        &::before{
+            content: url(../images/availability/cancellation.svg);
+        }
     }
     &__item-prepayment{
-        background-image: url(../images/availability/prepayment.svg);
+        &::before{
+            content: url(../images/availability/prepayment.svg);
+        }
     }
     &__check-quantity{
         max-width: 50px;
@@ -323,6 +658,12 @@
     }
     &__user-wrapper{
         display: flex;
+    }
+    &__item-text{
+        display: flex;
+    }
+    &__item-btn{
+        margin-left: auto;
     }
 }
 

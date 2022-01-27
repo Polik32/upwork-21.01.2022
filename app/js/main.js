@@ -6,9 +6,9 @@ $(function() {
  
 function f_acc(){
 //скрываем все кроме того, что должны открыть
-  $('.availability__item-info').not($(this).next());
+  $('.availability__item').not($(this).next());
 // открываем или скрываем блок под заголовком, по которому кликнули
-    $(this).next().slideToggle(2000);
+    $(this).next().slideToggle(500);
 }
 
 //*****************************************************************/ 
@@ -44,6 +44,6 @@ $("input").on("change", function() {
   this.setAttribute(
       "data-date",
       moment(this.value, "YYYY-MM-DD")
-      .format( this.getAttribute("data-date-format") )
+      .format( this.getAttribute("data-date-format"))
   )
 });
