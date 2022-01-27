@@ -582,6 +582,9 @@
             position: relative;
         }
     }
+    &__wrapper{
+        display: flex;
+    }
     &__title{
         @extend %inter-Extra_bold;
         @extend %color-bold;
@@ -591,6 +594,7 @@
     }
     &__options{
         margin-top: 22px;
+        width: 791px;
     }
     &__item{
         background: #FFFFFF;
@@ -598,11 +602,12 @@
         border-radius: 8px;
         max-width: 751px;
         cursor: pointer;
-        padding: 24px 25px 27px 53px;
+        padding: 24px 25px 27px 13px;
         margin-bottom: 10px;
     }
     &__title-wrap{
         display: flex;
+        padding-left: 40px;
     }
     &__item-title{
         @extend %inter-bold;
@@ -617,10 +622,11 @@
     }
     &__item-info{
         display: none;
+        padding-left: 20px;
         &::before{
             content: url(../images/small-line.svg);
             top: 0;
-            left: -36px;
+            left: -12px;
             bottom: 0;
             right: 0;
             position: relative;
@@ -631,6 +637,11 @@
     &__item-cancellation,
     &__item-prepayment{
         padding-left: 7px;
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 11px;
         &::before{
             top: 1px;
             left: -17px;
@@ -638,9 +649,12 @@
             right: 0;
             position: relative;
         }
+        & span{
+            @extend %inter-regular;
+        }
     }
     &__item-bed{
-        
+        margin-top: 19px;
         &::before{
             content: url(../images/availability/bed.svg);
         }
@@ -648,35 +662,129 @@
     &__item-space{
         &::before{
             content: url(../images/availability/space.svg);
+            top: 2px;
         }
     }
     &__item-cancellation{
         &::before{
             content: url(../images/availability/cancellation.svg);
+            top: 2px;
         }
     }
     &__item-prepayment{
+        padding-left: 11px;
         &::before{
             content: url(../images/availability/prepayment.svg);
+            left: -18px;
+            top: 3px;
         }
+    }
+    &__item-text p{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        max-width: 211px;
+
+    }
+    &__item-btn{
+        @extend %inter-bold;
+        font-size: 14px;
+        line-height: 21px;
+        @extend %color-light;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        padding: 12px 68.2px 13px 67px;
+        transition: all 0.3s;
+        &:hover{
+            color: #FFFFFF;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        &:active{
+            color: #FFFFFF;
+            background: #EB5E55;
+            transition: all 0.3s;
+        }
+    }
+    &__item-text{
+        display: flex;
+        padding-top: 8px;
+    }
+    &__check{
+        max-width: 361px;
+        max-height: 490px;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-top: 22px;
+        padding: 29px 31px 33px 26px;
+    }
+    &__check-title{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 12px;
+        line-height: 18px;
     }
     &__check-quantity{
         max-width: 50px;
     }
     &__check-date{
         display: flex;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
     &__check-guest{
         display: flex;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
     &__user-wrapper{
         display: flex;
     }  
-    &__item-text{
+    &__check-dateIn{
         display: flex;
+        flex-wrap: wrap;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        margin-top: 19px;
     }
-    &__item-btn{
-        margin-left: auto;
+    &__check-dareOut{
+        display: flex;
+        flex-wrap: wrap;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    &__check-text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 12px;
+        line-height: 18px;
+        width: 100%;
+        padding-top: 13px;
+        padding-left: 20px;
+    }
+    &__calendar{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-top: 3px;
+        padding-left: 20px;
+        padding-bottom: 17px;
+        width: 90%;
     }
 }
 
