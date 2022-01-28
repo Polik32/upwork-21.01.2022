@@ -404,9 +404,9 @@
                             <h4 class="availability__check-titleNumber">Rooms</h4>
                         </div>
                         <div class="availability__check-inner">        
-                            <button class="availability__check-btminus">-</button>
+                            <button class="availability__check-btminus"></button>
                             <input class="availability__check-quantity" type="text" value="1" data-max-count="50">
-                            <button class="availability__check-btplus">+</button>
+                            <button class="availability__check-btplus"></button>
                         </div>
                     </div>
                     <div class="availability__check-guest">
@@ -415,9 +415,9 @@
                             <h4 class="availability__check-titleNumber">Guest</h4>
                         </div>
                         <div class="availability__check-inner">        
-                            <button class="availability__check-btminus">-</button>
+                            <button class="availability__check-btminus"></button>
                             <input class="availability__check-quantity" type="text" value="1" data-max-count="50">
-                            <button class="availability__check-btplus">+</button>
+                            <button class="availability__check-btplus"></button>
                         </div>
                     </div>
                     <div class="availability__user">
@@ -426,7 +426,7 @@
                             <img class="availability__user-avatar" src="images/user-avatar.png" alt="avatar">
                             <div class="availability__user-info">
                                 <h4 class="availability__user-name">Jushawn McDowell</h4>
-                                <p class="availability__user-info">Joined in 2016</p>
+                                <p class="availability__user-join">Joined in 2016</p>
                             </div>
                             <img class="availability__check-verified" src="images/availability/verified-icon.png" alt="verified">
                         </div>
@@ -439,6 +439,7 @@
 </section>
 <section class="rules">
     <div class="container">
+        <div class="rules__inner-wrap">
         <div class="rules__inner">
             <h4 class="rules__title">Apartment rules</h4>
             <p class="rules__text">Guests are required to show a photo identification and credit card upon check-in.
@@ -452,7 +453,7 @@
                     </div>
                     <div class="rules__item-info">
                         <p class="rules__item-text">From 14:00 hours</p>
-                        <progress></progress>
+                        <progress class="rules__item-progress"></progress>
                     </div>
                 </div>
                 <div class="rules__item">
@@ -476,7 +477,7 @@
                     </div>
                     <div class="rules__item-info">
                         <p class="rules__item-text">Until 12:00 hours</p>
-                        <progress></progress>
+                        <progress class="rules__item-progress" max="100" value="50"></progress>
                     </div>
                 </div>
                 <div class="rules__item">
@@ -513,10 +514,12 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
 </section>
 <section class="reviews">
     <div class="container">
+        <div class="reviews__inner-wrap">
         <div class="reviews__inner">
             <h4 class="reviews__title">Latest reviews</h4>
             <div class="reviews__wrapper">
@@ -525,10 +528,9 @@
                     <div class="comment__header">
                         <h5 class="comment__title">Charming and comfortable house</h5>
                         <div class="comment__raiting">
-                            <img class="comment__star" src="images/reviews/raiting.svg" alt="star">
                             <p class="comment__raiting-info">4.91</p>
                             <a class="comment__ellipsis" href="#">
-                                <img class="comment__ellipsis-img" src="images/reviews/ellipsis.svg" alt="ellipsis">
+                                <img class="comment__ellipsis-img" src="images/ellipsis.svg" alt="ellipsis">
                             </a>
                         </div>
                     </div>
@@ -547,10 +549,9 @@
                     <div class="comment__header">
                         <h5 class="comment__title">Hideaway tent with pool and tub</h5>
                         <div class="comment__raiting">
-                            <img class="comment__star" src="images/reviews/raiting.svg" alt="star">
                             <p class="comment__raiting-info">4.8</p>
                             <a class="comment__ellipsis" href="#">
-                                <img class="comment__ellipsis-img" src="images/reviews/ellipsis.svg" alt="ellipsis">
+                                <img class="comment__ellipsis-img" src="images/ellipsis.svg" alt="ellipsis">
                             </a>
                         </div>
                     </div>
@@ -569,10 +570,9 @@
                     <div class="comment__header">
                         <h5 class="comment__title">Charming and comfortable house</h5>
                         <div class="comment__raiting">
-                            <img class="comment__star" src="images/reviews/raiting.svg" alt="star">
                             <p class="comment__raiting-info">4.96</p>
                             <a class="comment__ellipsis" href="#">
-                                <img class="comment__ellipsis-img" src="images/reviews/ellipsis.svg" alt="ellipsis">
+                                <img class="comment__ellipsis-img" src="images/ellipsis.svg" alt="ellipsis">
                             </a>
                         </div>
                     </div>
@@ -633,6 +633,7 @@
             </div>
         </div>
     </div>
+   </div>
  </div>
 </section>
 <section class="slider">

@@ -584,6 +584,7 @@
     }
     &__wrapper{
         display: flex;
+        margin-bottom: 36px;
     }
     &__title{
         @extend %inter-Extra_bold;
@@ -716,21 +717,34 @@
         padding-top: 8px;
     }
     &__check{
-        max-width: 361px;
-        max-height: 490px;
+        width: 361px;
+        height: 530px;
         background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
         border-radius: 10px;
         margin-left: auto;
         margin-top: 22px;
         padding: 29px 31px 33px 26px;
     }
-    &__check-title{
+    &__check-inner{
+        margin-left: auto;
+        margin-top: 34px;
+    }
+    &__check-title,
+    &__user-text{
         @extend %inter-regular;
         @extend %color-light;
         font-size: 12px;
         line-height: 18px;
     }
+    &__user-text{
+        margin-top: 13px;
+    }
     &__check-quantity{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
         max-width: 50px;
     }
     &__check-date{
@@ -749,7 +763,33 @@
     }
     &__user-wrapper{
         display: flex;
+        margin-top: 24px;
+    }
+    &__user-avatar{
+        width: 48px;
+    }
+    &__user-name{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__user-info{
+        margin-left: 17.5px;
+        margin-right: 8.5px;
+    }
+    &__user-join{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
     }  
+    &__check-verified{
+        width: 17px;
+        height: 20px;
+        position: relative;
+        top: 4px;
+    }
     &__check-dateIn{
         display: flex;
         flex-wrap: wrap;
@@ -767,7 +807,9 @@
         border-radius: 8px;
         margin-bottom: 10px;
     }
-    &__check-text{
+    &__check-text,
+    &__check-roomsNumber,
+    &__check-guestNumber{
         @extend %inter-regular;
         @extend %color-light;
         font-size: 12px;
@@ -784,25 +826,76 @@
         padding-top: 3px;
         padding-left: 20px;
         padding-bottom: 17px;
-        width: 90%;
+        width: 92%;
+    }
+    &__check-titleNumber{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-top: 3px;
+        padding-left: 20px;
+        padding-bottom: 17px;
+    }
+    &__check-btplus{
+        border: none;
+        background: transparent;
+        &::before{
+            content: url(../images/availability/plus.svg);
+            position: relative;
+            left: -21px;
+            right: 0;
+            top: 3px;
+            bottom: 0;
+        }
+    }
+    &__check-btminus{
+        border: none;
+        background: transparent;
+        &::before{
+            content: url(../images/availability/minus.svg);
+            position: relative;
+            left: 21px;
+            right: 0;
+            top: 3px;
+            bottom: 0;
+        }
     }
 }
 
 .rules{
+    &__inner-wrap{
+        &::before{
+            content: url(../images/big-line.svg);
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__inner{
+        margin-top: 36px;
+    }
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        margin-top: 33px;
     }
-    &__item-wrapperTitle{
-        position: relative;
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 22px;
+        line-height: 32px;
     }
-    &__item-wrapperTitle::before{
-        content: '';
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        position:absolute;
+    &__text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        width: 786px;
+        margin-top: 12px;
     }
     &__item-checkIn,
     &__item-pets,
@@ -813,42 +906,112 @@
     &__item-cards,
     &__item-age,
     &__item-groups{
-        background-repeat: no-repeat;
-        background-position: 0 0 0 7px;
-        padding-left: 27px;
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 7px;
+        &::before{
+            left: -7px;
+            top: 1px;
+            right: 0;
+            bottom: 0;
+            position: relative;
+        }
     }
     &__item-checkIn{
-        background-image: url(../images/rules/check-in.svg);
+        &::before{
+            content: url(../images/rules/check-in.svg);
+            top: 3px;
+        }
     }
     &__item-pets{
-        background-image: url(../images/rules/pets.svg);
+        &::before{
+            content: url(../images/rules/pets.svg);
+            top: 2px;
+        }
     }
     &__item-policies{
-        background-image: url(../images/rules/child-policies.svg);
+        &::before{
+            content: url(../images/rules/child-policies.svg);
+            top: 2px;
+        }
     }
     &__item-checkOut{
-        background-image: url(../images/rules/check-out.svg);
+        &::before{
+            content: url(../images/rules/check-out.svg);
+            top: 3px;
+        }
     }
     &__item-cancellation{
-        background-image: url(../images/rules/cancellation-prepayment.svg);
+        &::before{
+            content: url(../images/rules/cancellation-prepayment.svg);
+            top: 2px;
+        }
     }
     &__item-cot{
-        background-image: url(../images/rules/cot.svg);
+        &::before{
+            content: url(../images/rules/cot.svg);
+        }
     }
     &__item-cards{
-        background-image: url(../images/rules/cards.svg);
+        &::before{
+            content: url(../images/rules/cards.svg);
+        }
     }
     &__item-age{
-        background-image: url(../images/rules/age.svg);
+        &::before{
+            content: url(../images/rules/age.svg);
+        }
     }
     &__item-groups{
-        background-image: url(../images/rules/groups.svg);
+        &::before{
+            content: url(../images/rules/groups.svg);
+            top: 2px;
+        }
+    }
+    &__item{
+        margin-bottom: 34px;
+    }
+    &__item-info{
+        display: flex;
+        margin-top: 19px;
+    }
+    &__item-text{
+        @extend %inter-regular;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 18px;
+        width: 293px;
+    }
+    &__item-progress{
+        width: 74px;
     }
 }
 
 .reviews{
+    &__inner-wrap{
+        &::before{
+            content: url(../images/big-line.svg);
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
     &__wrapper{
         display: flex;
+        margin-top: 30px;
+    }
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 36px;
     }
 }
 
@@ -862,14 +1025,83 @@
 }
 
 .comment{
+    width: 750px;
+    &:not(:first-child)::before{
+        content: url(../images/reviews/line-reviews.svg);
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: relative;
+    }
     &__header{
         display: flex;
     }
+    &__title{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 16px;
+        line-height: 24px;
+    }
     &__raiting{
         display: flex;
+        margin-left: auto;
+    }
+    &__raiting-info{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 4px;
+        &::before{
+            content: url(../images/reviews/raiting.svg);
+            top: 0;
+            left: -4px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__ellipsis{
+        cursor: pointer;
+        margin-left: 16px;
+    }
+    &__ellipsis-img{
+        margin-bottom: 3px;
     }
     &__author{
         display: flex;
+        width: 100%;
+        margin-bottom: 22px;
+    }
+    &__text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        width: 718px;
+        margin-top: 8px;
+        margin-bottom: 36px;
+    }
+    &__author-info{
+        margin-left: 15px;
+    }
+    &__author-avatar{
+        width: 36px;
+        height: 36px;
+    }
+    &__author-name{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__author-date{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 12px;
+        line-height: 18px;
     }
 }
 
