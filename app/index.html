@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <title>Listing</title>
 </head>
@@ -17,7 +18,7 @@
             </a>
             <form class="header__form">
                 <input class="header__form-location" type="text" placeholder="Start typing..." value="Philadelphia">
-                <input class="header__form-from" id="txtDate" type="date" data-date="Aug 25" data-date-format="MMM DD">
+                <input class="header__form-from" type="date" data-date="Aug 25" data-date-format="MMM DD">
                 <input class="header__form-by" type="date" data-date="Aug 29" data-date-format="MMM DD">
                 <input class="header__form-guests" type="number" placeholder="Guests">
                 <button class="header__form-btn"></button>
@@ -31,24 +32,63 @@
 <section class="apartment">
     <div class="container">
         <div class="apartment__images">
-            <img src="images/content/location-photo-1.png" alt="image">
-            <img class="apartment__images-second" src="images/content/location-photo-2.png" alt="image">
-            <img class="apartment__images-third" src="images/content/location-photo-3.png" alt="image">
-            <img class="apartment__images-four" src="images/content/location-photo-4.png" alt="image">
-            <!-- <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image">
-            <img src="" alt="image"> -->
+            <a class="apartment__images-first" data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="apartment__images-first" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a class="apartment__images-second" data-fancybox="gallery-a" href="images/content/location-photo-2.png">
+                <img class="apartment__images-second" src="images/content/location-photo-2.png" alt="image">
+            </a>
+            <a class="apartment__images-third" data-fancybox="gallery-a" href="images/content/location-photo-3.png">
+                <img class="apartment__images-third" src="images/content/location-photo-3.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-4.png">
+                <span id="base-img" class="base-img__info"></span>
+                <img class="apartment__images-four rounded" src="images/content/location-photo-4.png" alt="image">
+            </a>
+            <div class="base-img" style="display:none">
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-2.png">
+                <img class="rounded" src="images/content/location-photo-2.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-2.png">
+                <img class="rounded" src="images/content/location-photo-2.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            <a data-fancybox="gallery-a" href="images/content/location-photo-1.png">
+                <img class="rounded" src="images/content/location-photo-1.png" alt="image">
+            </a>
+            </div>
         </div>
         <div class="apartment__info">
             <div class="apartment__raiting-wrapper">
@@ -292,6 +332,7 @@
             <div class="availability__options">
                 <div class="availability__item">
                     <div class="availability__title-wrap">
+                        <input class="custom-radio" type="radio">
                         <h6 class="availability__item-title">Queen or Two Double Beds Room with Free Late Check-out till 2pm</h6>
                         <p class="availability__item-price">$277</p>
                     </div>
@@ -308,6 +349,7 @@
                 </div>
                 <div class="availability__item">
                     <div class="availability__title-wrap">
+                        <input class="custom-radio" type="radio" id="color-2" name="color" value="indigo">
                         <h6 class="availability__item-title">Queen Room - Upper Floors with Free Late Check-out till 2pm</h6>
                         <p class="availability__item-price">$322</p>
                     </div>
@@ -590,8 +632,7 @@
             </div>
             <div class="reviews__score">
                 <div class="reviews__score-header">
-                    <div class="reviews__wrapper">
-                        <img class="reviews__score-star" src="images/reviews/raiting.svg" alt="star">
+                    <div class="reviews__score-wrapper">
                         <p class="reviews__score-raiting">4.96</p>
                     </div>
                     <p class="reviews__score-based">Average score based on 235 reviews</p>
@@ -605,7 +646,7 @@
                             </div>
                             <div class="progress__item-percent">
                                 <p>80%</p>
-                                <progress></progress>
+                                <progress max="100" value="80"></progress>
                             </div>
                         </div>
                         <div class="progress__item">
@@ -615,7 +656,7 @@
                             </div>
                             <div class="progress__item-percent">
                                 <p>15%</p>
-                                <progress></progress>
+                                <progress max="100" value="15"></progress>
                             </div>
                         </div>
                         <div class="progress__item">
@@ -625,7 +666,7 @@
                             </div>
                             <div class="progress__item-percent">
                                 <p>5%</p>
-                                <progress></progress>
+                                <progress max="100" value="5"></progress>
                             </div>
                         </div>
                     </div>
@@ -651,7 +692,6 @@
                         <div class="slider__info">
                             <p class="slider__info-price">$11 / night</p>
                             <div class="slider__info-raiting">
-                                <img class="slider__info-star" src="images/reviews/raiting.svg" alt="raiting">
                                 <p class="slider__info-score">4.91</p>
                                 <p class="slider__info-reviews">(98)</p> 
                             </div>
@@ -666,7 +706,6 @@
                         <div class="slider__info">
                             <p class="slider__info-price">$18 / night</p>
                             <div class="slider__info-raiting">
-                                <img class="slider__info-star" src="images/reviews/raiting.svg" alt="raiting">
                                 <p class="slider__info-score">4.65</p>
                                 <p class="slider__info-reviews">(93)</p> 
                             </div>
@@ -681,7 +720,20 @@
                         <div class="slider__info">
                             <p class="slider__info-price">$21 / night</p>
                             <div class="slider__info-raiting">
-                                <img class="slider__info-star" src="images/reviews/raiting.svg" alt="raiting">
+                                <p class="slider__info-score">4.55</p>
+                                <p class="slider__info-reviews">(35)</p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/content/slider/slide-3.png" alt="slider-image">
+                        <div class="slider__header">
+                            <h5 class="slider__header-title">Dream house</h5>
+                            <p class="slider__header-text">Shared room in Madrid</p>
+                        </div>
+                        <div class="slider__info">
+                            <p class="slider__info-price">$21 / night</p>
+                            <div class="slider__info-raiting">
                                 <p class="slider__info-score">4.55</p>
                                 <p class="slider__info-reviews">(35)</p> 
                             </div>
@@ -693,107 +745,110 @@
     </div>
 </section>
 <footer class="footer">
+    <div class="footer__wrapper">
     <div class="container">
         <div class="footer__inner">
-            <ul class="footer__link">
-                <li>About</li>
-                <li>
+            <ul class="footer__links">
+                <li class="footer__link-title">About</li>
+                <li class="footer__link">
                     <a href="#">How it works</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Newsroom</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Apartments for Work</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Careers</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">About Us</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Media</a>
                 </li>
             </ul>
-            <ul class="footer__link">
-                <li>Community</li>
-                <li>
+            <ul class="footer__links">
+                <li class="footer__link-title">Community</li>
+                <li class="footer__link">
                     <a href="#">Diversity & Belonging</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Against Discrimination</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Accessibility</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Invite friends</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Gift cards</a>
                 </li>
             </ul>
-            <ul class="footer__link">
-                <li>Become host</li>
-                <li>
+            <ul class="footer__links">
+                <li class="footer__link-title">Become host</li>
+                <li class="footer__link">
                     <a href="#">Host your home</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Host an Experience</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Host an Experience</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Open Homes</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Resource Center</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Community</a>
                 </li>
             </ul>
-            <ul class="footer__link">
-                <li>Bookings support</li>
-                <li>
+            <ul class="footer__links">
+                <li class="footer__link-title">Bookings support</li>
+                <li class="footer__link">
                     <a href="#">Updates for COVID-19</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Help Center</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Cancellation</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Neighborhood Support</a>
                 </li>
-                <li>
+                <li class="footer__link">
                     <a href="#">Trust & Safety</a>
                 </li>
             </ul>
         </div>
     </div>
+    </div>
         <div class="footer__copyright">
             <div class="container">
                 <div class="footer__copyright-inner">
                     <div class="footer__info">
-                        <p>© 2020 All rights reserved</p>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Term of Use</a>
+                        <p class="footer__info-text">© 2020 All rights reserved</p>
+                        <a class="footer__info-link" href="#">Privacy Policy</a>
+                        <a class="footer__info-link term" href="#">Term of Use</a>
                     </div>
                     <div class="footer__country">
-                        <a href="#">English</a>
+                        <a class="footer__country-link" href="#">English</a>
                     </div>
                     <div class="footer__currency">
-                        <a href="#">USD</a>
+                        <a class="footer__currency-link" href="#">USD</a>
                     </div>
                 </div>
             </div>
     </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="js/main.min.js"></script>    
 </body>
 </html>

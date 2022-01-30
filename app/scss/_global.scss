@@ -55,6 +55,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 input:focus::-webkit-input-placeholder { color:transparent; }
 
-
-
-
+a[data-fancybox] img {
+	cursor: zoom-in;
+  }
+  

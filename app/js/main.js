@@ -8,8 +8,13 @@ function f_acc(){
 //скрываем все кроме того, что должны открыть
   $('.availability__item').not($(this).next());
 // открываем или скрываем блок под заголовком, по которому кликнули
+    
     $(this).next().slideToggle(500);
-}
+
+  }
+
+ 
+
 
 //*****************************************************************/ 
 
@@ -47,3 +52,23 @@ $("input").on("change", function() {
       .format( this.getAttribute("data-date-format"))
   )
 });
+
+
+var countImg = $(".base-img").children().length;
+document.getElementById("base-img").innerHTML = '+ ' + countImg + ' photos';
+
+$(function(){
+
+$('.slider__items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: false,
+  prevArrow: "<img src='/images/slider-arrow-prev.svg' class='slider__arrow-prev' alt='prev'>",
+  nextArrow: "<img src='/images/slider-arrow-next.svg' class='slider__arrow-next' alt='next'>",
+  variableWidth: true
+});
+
+
+});
+
