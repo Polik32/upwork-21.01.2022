@@ -1635,6 +1635,7 @@
     }
 }
 
+// ***************************************
 
 .wrapper{
     background-image: url(../images/signUp/bg-img.png);
@@ -1732,7 +1733,7 @@
     padding-top: 110px;
 }
 
-.signin{
+.sign{
     &__title{
         @extend %inter-Extra_bold;
         @extend %color-bold;
@@ -1748,13 +1749,167 @@
         text-align: center;
         margin-top: 4px;
     }
+}
+
+.signup{
     &__form-email{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__input-wrapper{
         background: #FFFFFF;
         border: 1px solid #EDE8E9;
         border-radius: 8px;
+        width: 420px;
+        display: block;
+        padding-top: 13px;
+        padding-left: 20px;
+        padding-bottom: 17px;
+        margin: 0 auto;
+        margin-top: 42px;
+        margin-bottom: 15px;
+    }
+    &__input-title{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 12px;
+        line-height: 18px;
+        width: 100%;
+        padding-left: 2px;
+        &::after{
+            content: url(../images/signUp/mail-icon.svg);
+            position: relative;
+            top: 22px;
+            bottom: 0;
+            left: 336px;
+            right: 0;
+        }
+    }
+    &__form-terms{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
     }
 }
 
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 22px;
+    &__google,
+    &__facebook,
+    &__twitter{
+        @extend %inter-bold;
+        @extend %color-light;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        width: 420px;
+        margin-top: 6px;
+    }
+    &__google,
+    &__facebook,
+    &__twitter{
+        &::before{
+            position: relative;
+            top: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__google{
+        &::before{
+            content: url(../images/signUp/google.svg);
+            left: -100px;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/google-hover.svg);
+                position: relative;
+                top: 2px;
+                left: -100px;
+                transition: all 0.3s;
+            }
+        }
+        &:active{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/google-active.svg);
+                position: relative;
+                top: 2px;
+                left: -100px;
+                transition: all 0.3s;
+            }
+        }
+        
+    }
+    &__facebook{
+        &::before{
+            content: url(../images/signUp/facebook.svg);
+            left: -89px;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/facebook-hover.svg);
+                position: relative;
+                top: 2px;
+                left: -89px;
+                transition: all 0.3s;
+            }
+        }
+        &:active{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/facebook-active.svg);
+                position: relative;
+                top: 2px;
+                left: -89px;
+                transition: all 0.3s;
+            }
+        }
+    }
+    &__twitter{
+        &::before{
+            content: url(../images/signUp/twitter.svg);
+            left: -97px;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/twitter-hover.svg);
+                position: relative;
+                top: 2px;
+                left: -97px;
+                transition: all 0.3s;
+            }
+        }
+        &:active{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/twitter-active.svg);
+                position: relative;
+                top: 2px;
+                left: -97px;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
 
 
 
