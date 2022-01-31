@@ -1636,26 +1636,103 @@
 }
 
 
-// .container-main{
-//     padding: 0 506px 0 505px;
-// }
+.wrapper{
+    background-image: url(../images/signUp/bg-img.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
 
 .header{
-    &__signup-inner{
+    &__sign-inner{
         display: flex;
         padding: 20px 0 20px 0;
     }
-    &__btn-signin{
+    &__btn-sign{
+        margin-left: auto;
+    }
+    &__btn-sign,
+    &__btn-back{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        padding: 15px 36px 15px 34px;
+        transition: all 0.3s;
+        &:hover{
+            color: #FFFFFF;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        &:active{
+            color: #FFFFFF;
+            background: #EB5E55;
+            transition: all 0.3s;
+        }
+    }
+    &__btn-back{
+        padding: 15px 26.5px 15px 49.5px;
+        margin-right: 6px;
+        &::before{
+            content: url(../images/signUp/arrow-back.svg);
+            position: relative;
+            top: 1px;
+            left: -10px;
+            right: 0;
+            bottom: 0;
+        }
+        &:hover{
+            transition: all 0.3s;
+            &::before{
+                content: url(../images/signUp/arrow-back-white.svg);
+                position: relative;
+                top: 1px;
+                left: -10px;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    &__btn-wrapper{
         margin-left: auto;
     }
 }
 
-.main{
-    &__signup{
-        width: 440px;
-        margin: 0 auto;
-        padding-top: 110px;
+.form__big-btn{
+    @extend %inter-bold;
+    @extend %color-light;
+    font-size: 14px;
+    line-height: 21px;
+    background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 20px 183.5px 20px 183.5px;
+    &:hover{
+        color: #FFFFFF;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+        border-radius: 8px;
+        transition: all 0.3s;
     }
+    &:active{
+        color: #FFFFFF;
+        background: #EB5E55;
+        transition: all 0.3s;
+    }    
+}
+
+.container-main{
+    width: 440px;
+    margin: 0 auto;
+    padding-top: 110px;
+}
+
+.signin{
     &__title{
         @extend %inter-Extra_bold;
         @extend %color-bold;
@@ -1671,15 +1748,13 @@
         text-align: center;
         margin-top: 4px;
     }
-}
-
-.form{
-    &__signup-email{
+    &__form-email{
         background: #FFFFFF;
         border: 1px solid #EDE8E9;
         border-radius: 8px;
     }
 }
+
 
 
 

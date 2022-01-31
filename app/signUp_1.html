@@ -9,26 +9,28 @@
     <title>Sign Up (Step 1)</title>
 </head>
 <body>
-    <header class="header__signup">
+    <div class="wrapper">
+    <header class="header__sign">
         <div class="container">
-            <div class="header__signup-inner">
+            <div class="header__sign-inner">
                 <a class="logo" href="#">
                     <img class="logo__link" src="images/signUp/logo-full.svg">
                 </a>
-                <button class="header__btn-signin">Sign In</button>
+                <button class="header__btn-sign">Sign In</button>
             </div>
         </div>
     </header>
-    <main class="main__signup">
+    <main class="main">
         <div class="container-main">
-            <h2 class="main__title">Sign Up to getting started</h2>
-            <p class="main__text">Enter your details to proceed further</p>
-            <form class="form__signup" action="#">
-                <input class="form__signup-email" type="email" placeholder="catherine.shaw@gmail.com">
+            <div class="signup">
+            <h2 class="signup__title">Sign Up to getting started</h2>
+            <p class="signup__text">Enter your details to proceed further</p>
+            <form class="signup__form" action="#">
+                <input class="signup__form-email" type="email" placeholder="catherine.shaw@gmail.com">
                 <label>
                     <input type="checkbox" checked="checked" name="remember">I agree with terms & conditions
                 </label>
-                <button class="form__signup-btn" type="submit">Sign Up</button>
+                <button class="form__big-btn" type="submit">Sign Up</button>
             </form>
             <div class="main-delimiter">
                 <p class="main-delimiter-text">Or</p>
@@ -38,7 +40,9 @@
                 <a class="social__facebook" href="#">Sign Up with Facebook</a>
                 <a class="social__twitter" href="#">Sign Up with Twitter</a>
             </div>
+          </div>
         </div>
     </main>
+</div>
 </body>
 </html>
