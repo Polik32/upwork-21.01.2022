@@ -64,11 +64,10 @@ $('.slider__items').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   dots: false,
+  variableWidth: true,
   prevArrow: "<img src='/images/slider-arrow-prev.svg' class='slider__arrow-prev' alt='prev'>",
   nextArrow: "<img src='/images/slider-arrow-next.svg' class='slider__arrow-next' alt='next'>",
-  variableWidth: true
 });
-
 
 });
 

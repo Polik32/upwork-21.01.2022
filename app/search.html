@@ -35,12 +35,17 @@
             <div class="search__wrapper">
             <h2 class="search__title">Aparments in Philadelphia</h2>
             <div class="search__results">
-                <div class="search__sort">
-
-                </div>
+                <form action="#" class="search__sort">
+                    <button class="search__sort-btn" type="submit">Price</button>
+                    <button class="search__sort-btn" type="submit">Amenities</button>
+                    <button class="search__sort-btn" type="submit" >Room Type</button>
+                    <button class="search__sort-btn" type="submit">Cancellation</button>
+                    <button class="search__sort-btn" type="submit">More Filters</button>
+                </form>
                 <div class="search__items">
                     <div class="search__item">
-                        <img src="images/search-page/1.png" alt="image">
+                      <div class="search__item-wrapper">
+                        <img class="search__item-img" src="images/search-page/1.png" alt="image">
                         <div class="search__item-content">
                             <h4 class="search__item-title">Shepherd's Hut with hot tub</h4>
                             <p class="search__item-text">Entire apartment at Philadelphia</p>
@@ -54,12 +59,17 @@
                                     <p class="search__parameters-bedroom">1 bedroom</p>
                                     <p class="search__parameters-beds">2 beds</p>
                                 </div>
-                                <p class="search__info-rice">$35 / night</p>
+                                <div class="search__price">
+                                    <p class="search__price-value">$35</p>
+                                    <p class="search__price-info">night</p>
+                                </div>
                             </div>
                         </div>
+                      </div>
                     </div>
                     <div class="search__item">
-                        <img src="images/search-page/2.png" alt="image">
+                        <div class="search__item-wrapper">
+                        <img class="search__item-img" src="images/search-page/2.png" alt="image">
                         <div class="search__item-content">
                             <h4 class="search__item-title">Tiny house at Gora Gut</h4>
                             <p class="search__item-text">Entire apartment at Philadelphia</p>
@@ -73,12 +83,17 @@
                                     <p class="search__parameters-bedroom">1 bedroom</p>
                                     <p class="search__parameters-beds">2 beds</p>
                                 </div>
-                                <p class="search__info-rice">$42 / night</p>
+                                <div class="search__price">
+                                    <p class="search__price-value">$42</p>
+                                    <p class="search__price-info">night</p>
+                                </div>
                             </div>
                         </div>
+                      </div>
                     </div>
                     <div class="search__item">
-                        <img src="images/search-page/3.png" alt="image">
+                        <div class="search__item-wrapper">
+                        <img class="search__item-img" src="images/search-page/3.png" alt="image">
                         <div class="search__item-content">
                             <h4 class="search__item-title">Charming and comfortable house</h4>
                             <p class="search__item-text">Entire apartment at Philadelphia</p>
@@ -92,12 +107,17 @@
                                     <p class="search__parameters-bedroom">1 bedroom</p>
                                     <p class="search__parameters-beds">2 beds</p>
                                 </div>
-                                <p class="search__info-rice">$29 / night</p>
+                                <div class="search__price">
+                                    <p class="search__price-value">$29</p>
+                                    <p class="search__price-info">night</p>
+                                </div>
                             </div>
                         </div>
+                      </div>
                     </div>
                     <div class="search__item">
-                        <img src="images/search-page/4.png" alt="image">
+                        <div class="search__item-wrapper">
+                        <img class="search__item-img" src="images/search-page/4.png" alt="image">
                         <div class="search__item-content">
                             <h4 class="search__item-title">House with Kazbegi landscapes</h4>
                             <p class="search__item-text">Entire apartment at Philadelphia</p>
@@ -111,18 +131,27 @@
                                     <p class="search__parameters-bedroom">1 bedroom</p>
                                     <p class="search__parameters-beds">2 beds</p>
                                 </div>
-                                <p class="search__info-rice">$38 / night</p>
+                                <div class="search__price">
+                                    <p class="search__price-value">$38</p>
+                                    <p class="search__price-info">night</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                  </div>
                 </div>
                 <div class="search__pagination">
-
+                    <a class="search__pagination-item--active" href="#">1</a>
+                    <a class="search__pagination-item" href="#">2</a>
+                    <a class="search__pagination-item" href="#">3</a>
+                    <a class="search__pagination-item" href="#">4</a>
+                    <a class="search__pagination-item" href="#">5</a>
+                    <a class="search__pagination-next" href="#">Next</a>
                 </div>
             </div>
             </div>
             <div class="search__map">
-
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58192.6276827475!2d-75.26314146484711!3d39.955406903681066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b7d8d4b54beb%3A0x89f514d88c3e58c1!2z0KTRltC70LDQtNC10LvRjNGE0ZbRjywg0J_QtdC90YHRltC70YzQstCw0L3RltGPLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1643616874056!5m2!1suk!2sua" width="609" height="1000" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>

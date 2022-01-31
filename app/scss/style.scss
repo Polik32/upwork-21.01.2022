@@ -1231,6 +1231,7 @@
 .slider{
     background-image: url(../images/slider-bg.png);
     background-repeat: no-repeat;
+    background-size: contain;
     width: 100%;
     margin-top: 60px;
     &__inner{
@@ -1248,7 +1249,7 @@
         margin-top: 37px;
     }
     &__item{
-        width: 360px;
+        width: 360px !important;
         height: 361px;
         background: #FFFFFF;
         box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.15);
@@ -1435,43 +1436,248 @@
 	    margin: 0 auto;
 	    padding: 0 0 0 150px;
     }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__wrapper{
+        width: 654px;
+    }
     &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 34px;
+        line-height: 48px;
         margin-top: 31px;
     }
-    &__item{
-        display: flex;
-        width: 626px;
+    &__results{
+        margin-top: 12px;
     }
-    &__item-wrapper{
-        margin-bottom: 24px;
+    &__sort-btn{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 12px;
+        line-height: 18px;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        border-radius: 8px;
+        margin-left: 4px;
+        padding: 9px 25px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+    }
+    &__items{
+        margin-top: 57px;
+    }
+    &__item{
+        margin-bottom: 22px;
+        width: 626px;
         &:not(:first-child)::before{
             content: url(../images/search-page/line.svg);
             width: 100%;
-            top: 0;
+            top: -17px;
             left: 0;
             bottom: 0;
             right: 0;
             position: relative;
         }
+    }
+    &__item-wrapper{
+        display: flex;
+        width: 626px;
+    }
+    &__item-content{
+        margin-left: 28px;
+    }
+    &__item-title{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__item-text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
     }
     &__info-raiting{
         display: flex;
+        margin-top: 12.5px;
     }
     &__info-score{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 5px;
         &::before{
             content: url(../images/reviews/raiting.svg);
-            top: 0;
-            left: 0;
+            top: 1px;
+            left: -5px;
             right: 0;
             bottom: 0;
             position: relative;
         }
     }
+    &__info-reviews{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        margin-left: 5px;
+    }
     &__parameters-wrapper{
         display: flex;
+        margin-top: 24.5px;
     }
     &__parameters-rooms{
         display: flex;
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__parameters-guests{
+        padding-right: 7px;
+    }
+    &__parameters-bedroom{
+        padding-left: 7px;
+        padding-right: 7px;
+        &::before{
+            content: url(../images/search-page/dot.svg);
+            left: -7px;
+            right: 0;
+            bottom: 0;
+            top: -2px;
+            position: relative;
+        }
+    }
+    &__parameters-beds{
+        padding-left: 7px;
+        &::before{
+            content: url(../images/search-page/dot.svg);
+            left: -7px;
+            right: 0;
+            bottom: 0;
+            top: -2px;
+            position: relative;
+        }
+    }
+    &__price{
+        display: flex;
+        margin-left: 100px;
+    }
+    &__price-value{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 16px;
+        line-height: 24px;
+
+    }
+    &__price-info{
+        @extend %inter-regular;
+        @extend %color-light;
+        padding-left: 5px;
+        margin-top: 2px;
+        &::before {
+            content: "/";
+            top: 0;
+            left: -3px;
+            bottom: 0;
+            right: 0;
+            position: relative;
+        }
+    }
+    &__pagination{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 56px;
+        margin-bottom: 42px;
+    }
+    &__pagination-item{
+        @extend %color-bold;
+        padding: 9px 16.5px 10px 16.5px;
+        border-radius: 6px;
+        transition: all 0.3s;
+        &:hover{
+            border: none;
+            background-color: #EB5E55;
+            border-radius: 6px;
+            color: #FFFFFF;
+            transition: all 0.3s;
+        }
+        &--active{
+            padding: 9px 16.5px 10px 16.5px;
+            border-radius: 6px;
+            background-color: #EB5E55;
+            color: #FFFFFF;
+        }
+    }
+    &__pagination-next{
+        @extend %inter-bold;
+        @extend %color-light;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 6px;
+        padding: 9px 32px 10px 18px;
+        margin-left: 34px;
+        &::after{
+            content: url(../images/search-page/arrow-next.svg);
+            position: relative;
+            top: 0;
+            left: 22px;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+// .container-main{
+//     padding: 0 506px 0 505px;
+// }
+
+.header{
+    &__signup-inner{
+        display: flex;
+        padding: 20px 0 20px 0;
+    }
+    &__btn-signin{
+        margin-left: auto;
+    }
+}
+
+.main{
+    &__signup{
+        width: 440px;
+        margin: 0 auto;
+        padding-top: 110px;
+    }
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 34px;
+        line-height: 48px;
+        text-align: center;
+    }
+    &__text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 4px;
+    }
+}
+
+.form{
+    &__signup-email{
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
     }
 }
 
