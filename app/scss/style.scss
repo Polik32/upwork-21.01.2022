@@ -1637,11 +1637,48 @@
 
 // ***************************************
 
+.container-main{
+    width: 440px;
+    margin: 0 auto;
+    &-signup{
+        width: 460px;
+        margin: 0 auto;
+    }
+}
+
 .wrapper{
     background-image: url(../images/signUp/bg-img.png);
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
+}
+
+.main{
+    &__delimiter{
+        @extend %inter-regular;
+        @extend %color-light;
+        text-align: center;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 11px;
+        margin-bottom: 5px;
+        &::before{
+            content: url(../images/signUp/line.svg);
+            position: relative;
+            top: 17px;
+            left: -117px;
+            right: 0;
+            bottom: 0;
+        }
+        &::after{
+            content: url(../images/signUp/line.svg);
+            position: relative;
+            top: -25px;
+            left: 114px;
+            right: 0;
+            bottom: 0;
+        }
+    } 
 }
 
 .header{
@@ -1714,6 +1751,8 @@
     border: none;
     cursor: pointer;
     padding: 20px 183.5px 20px 183.5px;
+    display: flex;
+    margin: 0 auto;
     &:hover{
         color: #FFFFFF;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
@@ -1725,12 +1764,6 @@
         background: #EB5E55;
         transition: all 0.3s;
     }    
-}
-
-.container-main{
-    width: 440px;
-    margin: 0 auto;
-    padding-top: 110px;
 }
 
 .sign{
@@ -1749,6 +1782,40 @@
         text-align: center;
         margin-top: 4px;
     }
+    &__forms-checkbox{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    &__forms-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    &__forms-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 10px;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+      }
+      &__forms-checkbox:checked+label::before {
+        background-color: #C6D8D3;
+        background-image: url("../images/signUp/checked.png");
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+      }
+      &__forms-checkbox:disabled+label::before {
+        background-color: #e9ecef;
+      }
 }
 
 .signup{
@@ -1792,13 +1859,56 @@
         @extend %color-light;
         font-size: 14px;
         line-height: 21px;
+        margin-bottom: 30px;
+    }
+    &__form-wrapper{
+        display: flex;
+        justify-content: center;
+        grid-gap: 8px;
+    }
+    &__form-firstname,
+    &__form-lastname,
+    &__form-password,
+    &__form-confirm{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+    }
+    &__form-firstname{
+        width: 206px;
+        padding: 26px 0 25px 20px;
+    }
+    &__firstname-lable{
+        &::after{
+            content: url(../images/signUp/name-icon.svg);
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+    }
+    &__form-lastname{
+        width: 206px;
+        padding: 26px 0 25px 20px;
+    }
+    &__form-password,
+    &__form-confirm{
+        display: block;
+        margin: 8px auto;
+        width: 420px;
+        padding: 26px 0 25px 20px;
     }
 }
 
 .social{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 22px;
+    justify-content: center;
     &__google,
     &__facebook,
     &__twitter{
@@ -1835,7 +1945,6 @@
             &::before{
                 content: url(../images/signUp/google-hover.svg);
                 position: relative;
-                top: 2px;
                 left: -100px;
                 transition: all 0.3s;
             }
@@ -1846,9 +1955,7 @@
             &::before{
                 content: url(../images/signUp/google-active.svg);
                 position: relative;
-                top: 2px;
                 left: -100px;
-                transition: all 0.3s;
             }
         }
         
@@ -1864,9 +1971,7 @@
             &::before{
                 content: url(../images/signUp/facebook-hover.svg);
                 position: relative;
-                top: 2px;
                 left: -89px;
-                transition: all 0.3s;
             }
         }
         &:active{
@@ -1875,9 +1980,7 @@
             &::before{
                 content: url(../images/signUp/facebook-active.svg);
                 position: relative;
-                top: 2px;
                 left: -89px;
-                transition: all 0.3s;
             }
         }
     }
@@ -1888,13 +1991,12 @@
         }
         &:hover{
             @extend %color-bold;
+            top: 2px;
             transition: all 0.3s;
             &::before{
                 content: url(../images/signUp/twitter-hover.svg);
                 position: relative;
-                top: 2px;
                 left: -97px;
-                transition: all 0.3s;
             }
         }
         &:active{
@@ -1903,12 +2005,14 @@
             &::before{
                 content: url(../images/signUp/twitter-active.svg);
                 position: relative;
-                top: 2px;
                 left: -97px;
-                transition: all 0.3s;
             }
         }
     }
+}
+
+.signin{
+    
 }
 
 

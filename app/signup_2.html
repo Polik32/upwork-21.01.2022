@@ -24,9 +24,27 @@
         </div>
     </header>
     <main class="main">
-        <div class="container-main">
-            <div class="signin">
-                <h2 class="signin__title">Tell us more about yourself</h2>
+        <div class="container-main-signup">
+            <div class="signup">
+                <h2 class="sign__title">Tell us more about yourself</h2>
+                <p class="sign__text">Enter your details to proceed further</p>
+                <form class="signup__form" action="#">
+                    <div class="signup__input-wrapper">
+                        <p class="signup__input-title">Email</p>
+                        <input class="signup__form-email" type="email" placeholder="Start typing …" value="catherine.shaw@gmail.com">
+                    </div>
+                        <div class="signup__form-wrapper">
+                            <input class="signup__form-firstname" type="text" placeholder="First name">
+                            <input class="signup__form-lastname" type="text" placeholder="Last name">
+                        </div>
+                        <input class="signup__form-password" type="password" placeholder="Password">
+                        <input class="signup__form-confirm" type="password" placeholder="Confirm password">
+                    <div class="signup__form-terms" >
+                        <input class="sign__forms-checkbox" type="radio" id="forms-checkbox">I agree with terms & conditions
+                        <label for="forms-checkbox"></label>
+                    </div>
+                    <button class="form__big-btn" type="submit">Continue</button>
+                </form>
             </div>
         </div>
     </main>

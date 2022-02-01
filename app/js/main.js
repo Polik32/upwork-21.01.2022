@@ -70,4 +70,3 @@ $('.slider__items').slick({
 });
 
 });
-
