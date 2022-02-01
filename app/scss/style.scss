@@ -1741,7 +1741,8 @@
     }
 }
 
-.form__big-btn{
+.form__big-btn,
+.form__confirm-btn{
     @extend %inter-bold;
     @extend %color-light;
     font-size: 14px;
@@ -1763,8 +1764,12 @@
         color: #FFFFFF;
         background: #EB5E55;
         transition: all 0.3s;
-    }    
+    }
 }
+
+.form__confirm-btn{
+    padding: 20px 121px 20px 121px;
+}    
 
 .sign{
     &__title{
@@ -1774,13 +1779,19 @@
         line-height: 48px;
         text-align: center;
     }
-    &__text{
+    &__text,
+    &__text-finish{
         @extend %inter-regular;
         @extend %color-light;
         font-size: 14px;
         line-height: 21px;
         text-align: center;
         margin-top: 4px;
+        &-finish{
+            width: 418px;
+            text-align: center;
+            margin: 5px auto 39px auto;
+        }
     }
     &__forms-checkbox{
         position: absolute;
@@ -1816,10 +1827,20 @@
       &__forms-checkbox:disabled+label::before {
         background-color: #e9ecef;
       }
+      &__img{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 31px;
+        padding-top: 50px;
+      }
 }
 
 .signup{
-    &__form-email{
+    &__form-email,
+    &__form-firstname,
+    &__form-lastname,
+    &__form-password,
+    &__form-confirm{
         @extend %inter-bold;
         @extend %color-bold;
         font-size: 14px;
@@ -1870,10 +1891,6 @@
     &__form-lastname,
     &__form-password,
     &__form-confirm{
-        @extend %inter-bold;
-        @extend %color-light;
-        font-size: 14px;
-        line-height: 21px;
         background: #FFFFFF;
         border: 1px solid #EDE8E9;
         border-radius: 8px;
@@ -1902,6 +1919,73 @@
         margin: 8px auto;
         width: 420px;
         padding: 26px 0 25px 20px;
+    }
+    &__confirm-icon{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+    }
+    &__password-icon{
+        content: url(../images/signUp/password-icon.svg);
+        position: relative;
+    }
+    &__password-wrapper,
+    &__confirm-wrapper,
+    &__firstname-wrapper,
+    &__lastname-wrapper{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;  
+            background-repeat: no-repeat;
+           }
+        }
+    &__password-wrapper{
+        &::before{
+            background-image: url('../images/signUp/password-icon.svg');
+            top: 2px;
+            right: 34px;
+        }
+    }
+    &__confirm-wrapper{
+        &::before{
+            background-image: url('../images/signUp/confirm-icon.svg');
+            right: 34px;
+            top: 3px;
+        }
+    }
+    &__firstname-wrapper{
+        &::before{
+            background-image: url('../images/signUp/name-icon.svg');
+            right: 16px;
+            top: 3px;
+        }
+    }
+    &__lastname-wrapper{
+        &::before{
+            background-image: url('../images/signUp/name-icon.svg');
+            right: 16px;
+            top: 3px;
+        }
+    }
+    &__confirm-wrapper{
+        &:active{
+            &::before{
+                background-image: url('../images/signUp/confirm-icon.svg');
+                right: 16px;
+                top: 3px;
+            }
+        }
     }
 }
 
@@ -1957,8 +2041,7 @@
                 position: relative;
                 left: -100px;
             }
-        }
-        
+        } 
     }
     &__facebook{
         &::before{
@@ -2011,9 +2094,7 @@
     }
 }
 
-.signin{
-    
-}
+
 
 
 
