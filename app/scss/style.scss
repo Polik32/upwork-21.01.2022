@@ -1806,12 +1806,14 @@
     &__forms-checkbox+label::before {
         content: '';
         display: inline-block;
+        position: relative;
         width: 20px;
         height: 20px;
         flex-shrink: 0;
         flex-grow: 0;
         border-radius: 10px;
-        margin-right: 0.5em;
+        right: 248px;
+        top: 5px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
@@ -1881,6 +1883,7 @@
         font-size: 14px;
         line-height: 21px;
         margin-bottom: 30px;
+        margin-left: 45px;
     }
     &__form-wrapper{
         display: flex;
@@ -1976,15 +1979,6 @@
             background-image: url('../images/signUp/name-icon.svg');
             right: 16px;
             top: 3px;
-        }
-    }
-    &__confirm-wrapper{
-        &:active{
-            &::before{
-                background-image: url('../images/signUp/confirm-icon.svg');
-                right: 16px;
-                top: 3px;
-            }
         }
     }
 }
