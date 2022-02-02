@@ -1852,22 +1852,24 @@
         font-size: 14px;
         line-height: 21px;
     }
-    &__form-email{
+    &__form-img{
         &::after{
             content: url(../images/signUp/mail-icon.svg);
             position: relative;
-            top: 22px;
+            top: 3px;
             bottom: 0;
-            left: 336px;
+            left: 135px;
             right: 0;
         }
-        &:focus~.signup__input-title{
+    }
+    &__form-email{
+        &:focus~.signup__form-img{
             &::after{
-                content: url(../images/signUp/name-icon.svg);
+                content: url(../images/signUp/mail-icon-active.svg);
                 position: relative;
-                top: 22px;
+                top: 3px;
                 bottom: 0;
-                left: 336px;
+                left: 135px;
                 right: 0;
             }
         }
