@@ -1797,6 +1797,9 @@
         position: absolute;
         z-index: -1;
         opacity: 0;
+        &:checked~.signup__form-text {
+            @extend %color-bold;
+          }
     }
     &__forms-checkbox+label {
         display: inline-flex;
@@ -1812,12 +1815,13 @@
         flex-shrink: 0;
         flex-grow: 0;
         border-radius: 10px;
-        right: 248px;
+        right: 8px;
         top: 5px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
         background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        cursor: pointer;
       }
       &__forms-checkbox:checked+label::before {
         background-color: #C6D8D3;
@@ -1848,6 +1852,26 @@
         font-size: 14px;
         line-height: 21px;
     }
+    &__form-email{
+        &::after{
+            content: url(../images/signUp/mail-icon.svg);
+            position: relative;
+            top: 22px;
+            bottom: 0;
+            left: 336px;
+            right: 0;
+        }
+        &:focus~.signup__input-title{
+            &::after{
+                content: url(../images/signUp/name-icon.svg);
+                position: relative;
+                top: 22px;
+                bottom: 0;
+                left: 336px;
+                right: 0;
+            }
+        }
+    }
     &__input-wrapper{
         background: #FFFFFF;
         border: 1px solid #EDE8E9;
@@ -1859,7 +1883,7 @@
         padding-bottom: 17px;
         margin: 0 auto;
         margin-top: 42px;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
     }
     &__input-title{
         @extend %inter-regular;
@@ -1868,14 +1892,14 @@
         line-height: 18px;
         width: 100%;
         padding-left: 2px;
-        &::after{
-            content: url(../images/signUp/mail-icon.svg);
-            position: relative;
-            top: 22px;
-            bottom: 0;
-            left: 336px;
-            right: 0;
-        }
+        // &::after{
+        //     content: url(../images/signUp/mail-icon.svg);
+        //     position: relative;
+        //     top: 22px;
+        //     bottom: 0;
+        //     left: 336px;
+        //     right: 0;
+        // }
     }
     &__form-terms{
         @extend %inter-bold;
@@ -1883,7 +1907,7 @@
         font-size: 14px;
         line-height: 21px;
         margin-bottom: 30px;
-        margin-left: 45px;
+        margin-left: 20px;
     }
     &__form-wrapper{
         display: flex;
