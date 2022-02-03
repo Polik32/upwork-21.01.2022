@@ -1,0 +1,685 @@
+.container-main{
+    width: 440px;
+    margin: 0 auto;
+    &-signup{
+        width: 460px;
+        margin: 0 auto;
+    }
+}
+
+.wrapper{
+    background-image: url(../images/signUp/bg-img.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.main{
+    &__delimiter{
+        @extend %inter-regular;
+        @extend %color-light;
+        text-align: center;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 11px;
+        margin-bottom: 5px;
+        &::before{
+            content: url(../images/signUp/line.svg);
+            position: relative;
+            top: 17px;
+            left: -117px;
+            right: 0;
+            bottom: 0;
+        }
+        &::after{
+            content: url(../images/signUp/line.svg);
+            position: relative;
+            top: -25px;
+            left: 114px;
+            right: 0;
+            bottom: 0;
+        }
+    } 
+}
+
+.header{
+    &__sign-inner{
+        display: flex;
+        padding: 20px 0 20px 0;
+    }
+    &__btn-sign{
+        margin-left: auto;
+    }
+    &__btn-sign,
+    &__btn-back{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        padding: 15px 36px 15px 34px;
+        transition: all 0.3s;
+        &:hover{
+            color: #FFFFFF;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        &:active{
+            color: #FFFFFF;
+            background: #EB5E55;
+            transition: all 0.3s;
+        }
+    }
+    &__btn-back{
+        padding: 15px 26.5px 15px 49.5px;
+        margin-right: 6px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 6px;
+            bottom: 0;
+            right: 0;
+            left: 29px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/arrow-back.svg');
+            background-repeat: no-repeat;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: all 0.3s;
+            &::before{
+                transition: all 0.3s;
+                background-image: url('../images/signUp/arrow-back-white.svg');
+                top: 6px;
+                left: 29px;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    &__btn-wrapper{
+        margin-left: auto;
+    }
+}
+
+.form__big-btn,
+.form__confirm-btn{
+    @extend %inter-bold;
+    @extend %color-light;
+    font-size: 14px;
+    line-height: 21px;
+    background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 20px 183.5px 20px 183.5px;
+    display: flex;
+    margin: 0 auto;
+    transition: all 0.3s;
+    &:hover{
+        transition: all 0.3s;
+        color: #FFFFFF;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+    &:active{
+        transition: all 0.3s;
+        color: #FFFFFF;
+        background: #EB5E55;
+        transition: all 0.3s;
+    }
+}
+
+.form__confirm-btn{
+    padding: 20px 121px 20px 121px;
+}    
+
+.sign{
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 34px;
+        line-height: 48px;
+        text-align: center;
+    }
+    &__title-recovery{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    &__text,
+    &__text-finish{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 4px;
+        &-finish{
+            width: 418px;
+            text-align: center;
+            margin: 5px auto 39px auto;
+        }
+    }
+    &__forms-checkbox{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &:checked~.sign__form-text {
+            @extend %color-bold;
+            transition: color 0.1s;
+          }
+    }
+    &__forms-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    &__forms-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 10px;
+        right: 8px;
+        top: 5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        cursor: pointer;
+      }
+      &__forms-checkbox:checked+label::before {
+        background-color: #C6D8D3;
+        background-image: url("../images/signUp/checked.png");
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+      }
+      &__forms-checkbox:disabled+label::before {
+        background-color: #e9ecef;
+      }
+      &__img{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 31px;
+        padding-top: 50px;
+      }
+    &__form-email,
+    &__form-firstname,
+    &__form-lastname,
+    &__form-password,
+    &__form-confirm,
+    &__form-recovery{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__form-img{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 6px;
+            bottom: 0;
+            right: 0;
+            left: 137px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/mail-icon.svg');
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-email{
+        &:focus~.sign__form-img{
+            &::after{
+                content: '';
+                position: absolute;
+                top: 6px;
+                bottom: 0;
+                right: 0;
+                left: 137px;
+                margin: auto 0;
+                width: 18px;
+                height: 18px;
+                background-image: url('../images/signUp/mail-icon-active.svg');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__form-emailImg{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 6px;
+            bottom: 0;
+            right: 0;
+            left: 137px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/confirm-icon.svg');
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-email{
+        &:focus~.sign__form-emailImg{
+            &::after{
+                content: '';
+                position: absolute;
+                top: 6px;
+                bottom: 0;
+                right: 0;
+                left: 137px;
+                margin: auto 0;
+                width: 18px;
+                height: 18px;
+                background-image: url('../images/signUp/confirm-icon-active.svg');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__form-recoveryImg{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 6px;
+            bottom: 0;
+            right: 0;
+            left: 137px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/confirm-icon.svg');
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-recovery{
+        &:focus~.sign__form-recoveryImg{
+            &::after{
+                content: '';
+                position: absolute;
+                top: 6px;
+                bottom: 0;
+                right: 0;
+                left: 137px;
+                margin: auto 0;
+                width: 18px;
+                height: 18px;
+                background-image: url('../images/signUp/confirm-icon-checked.svg');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__form-firstnameImg,
+    &__form-firstname{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -32px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/name-icon.svg');
+            right: 16px;
+            top: 3px;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-firstname{
+        &:focus~.sign__form-firstnameImg{
+            &::before{
+                background-image: url('../images/signUp/name-icon-active.svg');
+            }
+        }
+    }
+
+    &__form-lastnameImg,
+    &__form-lastname{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -36px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/name-icon.svg');
+            right: 16px;
+            top: 3px;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-lastname{
+        &:focus~.sign__form-lastnameImg{
+            &::before{
+                background-image: url('../images/signUp/name-icon-active.svg');
+            }
+        }
+    }
+
+    &__form-passwordImg,
+    &__form-password{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 404px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/password-icon.svg');
+            right: 0;
+            top: -88px;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-password{
+        &:focus~.sign__form-passwordImg{
+            &::before{
+                background-image: url('../images/signUp/password-icon-active.svg');
+            }
+        }
+    }
+
+    &__form-confirmImg,
+    &__form-confirm{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 404px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/confirm-icon.svg');
+            right: 0;
+            top: -88px;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-confirm{
+        &:focus~.sign__form-confirmImg{
+            &::before{
+                background-image: url('../images/signUp/confirm-icon-active.svg');
+            }
+        }
+    }
+    &__input-wrapper{
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+        width: 420px;
+        display: block;
+        padding-top: 13px;
+        padding-left: 20px;
+        padding-bottom: 17px;
+        margin: 0 auto;
+        margin-top: 42px;
+        margin-bottom: 8px;
+    }
+    &__input-wrapper:nth-child(2){
+        margin-top: 8px;
+    }
+    &__input-title{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 12px;
+        line-height: 18px;
+        width: 100%;
+        padding-left: 2px;
+    }
+    &__form-terms{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+    &__form-yourself{
+        margin-left: 30px;
+    }
+    &__form-wrapper{
+        display: flex;
+        justify-content: center;
+        grid-gap: 8px;
+    }
+    &__form-firstname,
+    &__form-lastname,
+    &__form-password,
+    &__form-confirm{
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+    }
+    &__form-firstname{
+        width: 206px;
+        padding: 26px 0 25px 20px;
+    }
+    &__firstname-lable{
+        &::after{
+            content: url(../images/signUp/name-icon.svg);
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+    }
+    &__form-lastname{
+        width: 206px;
+        padding: 26px 0 25px 20px;
+    }
+    &__form-password,
+    &__form-confirm{
+        display: block;
+        margin: 8px auto;
+        width: 420px;
+        padding: 26px 0 25px 20px;
+    }
+    &__confirm-icon{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 8px;
+    }
+    &__password-icon{
+        content: url(../images/signUp/password-icon.svg);
+        position: relative;
+    }
+    // &__password-wrapper,
+    // &__confirm-wrapper
+    // // &__firstname-wrapper,
+    // // &__lastname-wrapper
+    // {
+    //     position: relative;
+    //     &::before{
+    //         content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         right: 0;
+    //         margin: auto 0;
+    //         width: 18px;
+    //         height: 18px;  
+    //         background-repeat: no-repeat;
+    //        }
+    //     }
+    // &__password-wrapper{
+    //     &::before{
+    //         background-image: url('../images/signUp/password-icon.svg');
+    //         top: 2px;
+    //         right: 34px;
+    //     }
+    // }
+    // &__confirm-wrapper{
+    //     &::before{
+    //         background-image: url('../images/signUp/confirm-icon.svg');
+    //         right: 34px;
+    //         top: 3px;
+    //     }
+    // }
+    // &__firstname-wrapper{
+    //     &::before{
+            // background-image: url('../images/signUp/name-icon.svg');
+            // right: 16px;
+            // top: 3px;
+    //     }
+    // }
+    // &__lastname-wrapper{
+    //     &::before{
+    //         background-image: url('../images/signUp/name-icon.svg');
+    //         right: 16px;
+    //         top: 3px;
+    //     }
+    // }
+}
+
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__google,
+    &__facebook,
+    &__twitter{
+        @extend %inter-bold;
+        @extend %color-light;
+        background: #FFFFFF;
+        border: 1px solid #EDE8E9;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        width: 420px;
+        margin-top: 6px;
+    }
+    &__google,
+    &__facebook,
+    &__twitter{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;  
+            background-repeat: no-repeat;
+        }
+    }
+    &__google{
+        transition: color 0.1s;
+        &::before{
+            background-image: url('../images/signUp/google.svg');
+            top: 2px;
+            right: 0;
+            left: 19px;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: color 0.1s;
+            &::before{
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/google-hover.svg');
+                top: 2px;
+                right: 34px;
+            }
+        }
+        &:active{
+            @extend %color-bold;
+            transition: color 0.1s;
+            &::before{
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/google-active.svg');
+                top: 2px;
+                right: 34px;
+            }
+        } 
+    }
+    &__facebook{
+        transition: color 0.1s;
+        &::before{
+            background-image: url('../images/signUp/facebook.svg');
+            top: 2px;
+            right: 0;
+            left: 19px;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: color 0.1s;
+            &::before{
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/facebook-hover.svg');
+                top: 2px;
+                right: 34px;
+            }
+        }
+        &:active{
+            @extend %color-bold;
+            transition: color 0.1s;
+            &::before{
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/facebook-active.svg');
+                top: 2px;
+                right: 34px;
+            }
+        } 
+    }
+    &__twitter{
+        transition: color 0.1s;
+        &::before{
+            background-image: url('../images/signUp/twitter.svg');
+            top: 2px;
+            right: 0;
+            left: 19px;
+        }
+        &:hover{
+            @extend %color-bold;
+            transition: color 0.1s;
+            &::before{
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/twitter-hover.svg');
+                top: 2px;
+                right: 34px;
+            }
+        }
+        &:active{
+            @extend %color-bold;
+            transition: color 0.1s;
+            &::before{
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/twitter-active.svg');
+                top: 2px;
+                right: 34px;
+            }
+        } 
+    }
+}
