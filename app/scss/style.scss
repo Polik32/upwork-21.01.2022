@@ -472,6 +472,7 @@
         cursor: pointer;
         padding: 14px 27.5px 11px 50.5px;
         transition: background 0.3s;
+        transition: all 0.3s;
         &:hover{
             color: #FFFFFF;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
@@ -1754,13 +1755,16 @@
     padding: 20px 183.5px 20px 183.5px;
     display: flex;
     margin: 0 auto;
+    transition: all 0.3s;
     &:hover{
+        transition: all 0.3s;
         color: #FFFFFF;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #EB5E55;
         border-radius: 8px;
         transition: all 0.3s;
     }
     &:active{
+        transition: all 0.3s;
         color: #FFFFFF;
         background: #EB5E55;
         transition: all 0.3s;
@@ -1799,6 +1803,7 @@
         opacity: 0;
         &:checked~.signup__form-text {
             @extend %color-bold;
+            transition: color 0.1s;
           }
     }
     &__forms-checkbox+label {
@@ -1894,14 +1899,6 @@
         line-height: 18px;
         width: 100%;
         padding-left: 2px;
-        // &::after{
-        //     content: url(../images/signUp/mail-icon.svg);
-        //     position: relative;
-        //     top: 22px;
-        //     bottom: 0;
-        //     left: 336px;
-        //     right: 0;
-        // }
     }
     &__form-terms{
         @extend %inter-bold;
@@ -2030,87 +2027,105 @@
     &__google,
     &__facebook,
     &__twitter{
+        position: relative;
         &::before{
-            position: relative;
-            top: 2px;
+            content: '';
+            position: absolute;
+            top: 0;
             bottom: 0;
-            left: 0;
             right: 0;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;  
+            background-repeat: no-repeat;
         }
     }
     &__google{
+        transition: color 0.1s;
         &::before{
-            content: url(../images/signUp/google.svg);
-            left: -100px;
+            background-image: url('../images/signUp/google.svg');
+            top: 2px;
+            right: 0;
+            left: 19px;
         }
         &:hover{
             @extend %color-bold;
-            transition: all 0.3s;
+            transition: color 0.1s;
             &::before{
-                content: url(../images/signUp/google-hover.svg);
-                position: relative;
-                left: -100px;
-                transition: all 0.3s;
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/google-hover.svg');
+                top: 2px;
+                right: 34px;
             }
         }
         &:active{
             @extend %color-bold;
-            transition: all 0.3s;
+            transition: color 0.1s;
             &::before{
-                content: url(../images/signUp/google-active.svg);
-                position: relative;
-                left: -100px;
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/google-active.svg');
+                top: 2px;
+                right: 34px;
             }
         } 
     }
     &__facebook{
+        transition: color 0.1s;
         &::before{
-            content: url(../images/signUp/facebook.svg);
-            left: -89px;
+            background-image: url('../images/signUp/facebook.svg');
+            top: 2px;
+            right: 0;
+            left: 19px;
         }
         &:hover{
             @extend %color-bold;
-            transition: all 0.3s;
+            transition: color 0.1s;
             &::before{
-                content: url(../images/signUp/facebook-hover.svg);
-                position: relative;
-                left: -89px;
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/facebook-hover.svg');
+                top: 2px;
+                right: 34px;
             }
         }
         &:active{
             @extend %color-bold;
-            transition: all 0.3s;
+            transition: color 0.1s;
             &::before{
-                content: url(../images/signUp/facebook-active.svg);
-                position: relative;
-                left: -89px;
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/facebook-active.svg');
+                top: 2px;
+                right: 34px;
             }
-        }
+        } 
     }
     &__twitter{
+        transition: color 0.1s;
         &::before{
-            content: url(../images/signUp/twitter.svg);
-            left: -97px;
+            background-image: url('../images/signUp/twitter.svg');
+            top: 2px;
+            right: 0;
+            left: 19px;
         }
         &:hover{
             @extend %color-bold;
-            top: 2px;
-            transition: all 0.3s;
+            transition: color 0.1s;
             &::before{
-                content: url(../images/signUp/twitter-hover.svg);
-                position: relative;
-                left: -97px;
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/twitter-hover.svg');
+                top: 2px;
+                right: 34px;
             }
         }
         &:active{
             @extend %color-bold;
-            transition: all 0.3s;
+            transition: color 0.1s;
             &::before{
-                content: url(../images/signUp/twitter-active.svg);
-                position: relative;
-                left: -97px;
+                transition: background-image 0.2s;
+                background-image: url('../images/signUp/twitter-active.svg');
+                top: 2px;
+                right: 34px;
             }
-        }
+        } 
     }
 }
 
