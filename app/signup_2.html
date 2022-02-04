@@ -45,23 +45,24 @@
                             </div>
                         </div>
                         <div class="sign__password-wrapper">
-                            <input class="sign__form-password" type="password" id="password1" placeholder="Password">
+                            <input class="sign__form-password" type="password" placeholder="Password" required>
                             <span class="sign__form-passwordImg"></span>
                         </div>
                         <div class="sign__confirm-wrapper">
-                            <input class="sign__form-confirm" type="password" id="password2" placeholder="Confirm password">
-                            <span class="sign__form-confirmImg"></span>
+                            <input class="sign__form-confirm" type="password" id="checkPass" placeholder="Confirm password" required>
+                            <span class="sign__form-confirmImg" id="confirm"></span>
                         </div>
                         <div class="sign__form-terms sign__form-yourself">
                             <input class="sign__forms-checkbox" type="checkbox" id="forms-checkbox">
                             <label for="forms-checkbox"></label>
-                            <span class="sign__form-text">I agree with terms & conditions</span> 
+                            <span class="sign__form-text">I agree with terms & conditions</span>
                         </div>
-                    <button class="form__big-btn" type="submit">Continue</button>
+                    <button class="form__big-btn" type="submit" id="submit">Continue</button>
                 </form>
             </div>
         </div>
     </main>
 </div>
+<script src="js/forms.min.js"></script> 
 </body>
 </html>  
