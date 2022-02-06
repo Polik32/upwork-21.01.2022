@@ -13,36 +13,41 @@
     <header class="header__sign">
         <div class="container">
             <div class="header__sign-inner">
-                <a class="logo" href="#">
-                    <img class="logo__link" src="images/signUp/logo-full.svg">
+                <a class="header__logo-link" href="#">
+                    <img class="header__forms-logo"  src="images/signUp/logo-full.svg">
+                    <img class="header__forms-logoMobile" src="images/signUp/mobile/logo.svg">
                 </a>
                 <button class="header__btn-sign">Sign Up</button>
+                <a class="header__link-back" href="#">
+                    <img class="header__link-img" src="images/signUp/mobile/back-btn.svg" alt="back-img">
+                </a>
             </div>
         </div>
     </header>
     <main class="main">
-        <div class="container-main">
+        <div class="container-main container-main-signin">
             <div class="sign">
                 <h2 class="sign__title">Sign In to getting started</h2>
+                <h2 class="sign__title-mobile">Welcome to Roomsfy</h2>
                 <p class="sign__text">Enter your details to proceed further</p>
-                <form class="sign__form" action="#" >
-                    <div class="sign__input-wrapper">
+                <form class="sign__form" action="#">
+                    <div class="sign__input-wrapper sign__input-wrapper-signin">
                         <p class="sign__input-title">Email</p>
-                        <input class="sign__form-email" type="email" placeholder="Start typing …" value="catherine.shaw@gmail.com">
-                        <span class="sign__form-img"></span>
+                        <input class="sign__form-email sign__form-email--signin" type="email" placeholder="Start typing …" value="catherine.shaw@gmail.com" required>
+                        <span class="sign__form-img sign__form-img--signin"></span>
                     </div>
-                    <div class="sign__input-wrapper">
+                    <div class="sign__input-wrapper sign__input-wrapper-password">
                         <p class="sign__input-title">Your password</p>
-                        <input class="sign__form-email" type="text" placeholder="Start typing …" value="qwerty123">
-                        <span class="sign__form-emailImg"></span>
+                        <input class="sign__form-password--signin" type="password" placeholder="Password" required>
+                        <span class="sign__form-passwordImg--signin"></span>
                     </div>
-                    <div class="sign__form-terms">
+                    <div class="sign__form-terms sign__form-terms-signin">
                         <input class="sign__forms-checkbox" type="checkbox" id="forms-checkbox">
                         <label for="forms-checkbox"></label>
                         <span class="sign__form-text">Remember me</span>
                         <span class="sign__server-results" id="server-results">Recover password</span> 
                     </div>
-                    <button class="form__big-btn" type="submit">Sign In</button>
+                    <button class="form__big-btn form__big-btn--signin" type="submit">Sign In</button>
                 </form>
                 <div class="main__delimiter">
                     <p class="main__delimiter-text">Or</p>
@@ -51,6 +56,9 @@
                     <a class="social__google" href="#">Sign Up with Google</a>
                     <a class="social__facebook" href="#">Sign Up with Facebook</a>
                     <a class="social__twitter" href="#">Sign Up with Twitter</a>
+                    <a class="social__google-mobile" href="#"></a>
+                    <a class="social__facebook-mobile" href="#"></a>
+                    <a class="social__twitter-mobile" href="#"></a>
                 </div>
             </div>
         </div>

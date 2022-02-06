@@ -10,29 +10,31 @@
 </head>
 <body>
     <div class="wrapper">
-    <header class="header__sign">
+    <header class="header__sign header__sign-inner--mobile">
         <div class="container">
             <div class="header__sign-inner">
-                <a class="logo" href="#">
+                <a class="header__logo-descktop" href="#">
                     <img class="logo__link" src="images/signUp/logo-full.svg">
                 </a>
                 <button class="header__btn-sign">Sign Up</button>
+                <button class="header__btn-cancel">Done</button>
             </div>
         </div>
     </header>
     <main class="main">
-        <div class="container-main">
+        <div class="container-main container-main-recovery">
             <div class="sign">
                 <img class="sign__img" src="images/signUp/thank-you-img.png" alt="thak you">
                 <h2 class="sign__title sign__title-recovery">Lost your password? <br> Enter your details to recover</h2>
+                <h2 class="sign__title sign__title-mobile">Lost your password?</h2>
                 <p class="sign__text">Enter your details to proceed further</p>
                 <form class="sign__form" action="#">
-                    <div class="sign__input-wrapper">
+                    <div class="sign__input-wrapper sign__input-wrapper--recovery">
                         <p class="sign__input-title">Email</p>
                         <input class="sign__form-recovery" type="email" placeholder="Start typing …">
                         <span class="sign__form-recoveryImg" id="recovery"></span>
                     </div>
-                    <button class="form__big-btn" type="submit">Recover</button>
+                    <button class="form__big-btn form__big-btn--recovery" type="submit">Recover</button>
                 </form>
             </div>
         </div>

@@ -5,6 +5,10 @@
     &-signup{
         width: 460px;
         margin: 0 auto;
+        margin-top: 90px;
+    }
+    &-recovery{
+        margin-top: 50px;
     }
 }
 
@@ -44,7 +48,15 @@
 }
 
 .header{
-    &__logo-mobile{
+    &__logo-link{
+        display: flex;
+        margin: auto;
+        margin: auto 0;
+    }
+    &__forms-logoMobile{
+        display: none;
+    }
+    &__link-back{
         display: none;
     }
     &__sign-inner{
@@ -55,7 +67,8 @@
         margin-left: auto;
     }
     &__btn-sign,
-    &__btn-back{
+    &__btn-back,
+    &__btn-cancel{
         @extend %inter-bold;
         @extend %color-light;
         font-size: 14px;
@@ -77,6 +90,9 @@
             background: #EB5E55;
             transition: all 0.3s;
         }
+    }
+    &__btn-cancel{
+        display: none;
     }
     &__btn-back{
         padding: 15px 26.5px 15px 49.5px;
@@ -140,6 +156,9 @@
         background: #EB5E55;
         transition: all 0.3s;
     }
+}
+.form__confirm-btn--mobile{
+    display: none;
 }
 
 .form__confirm-btn{
@@ -218,7 +237,7 @@
         background-color: #C6D8D3;
         background-image: url("../images/signUp/checked.png");
         background-repeat: no-repeat;
-        background-position-x: 54%;
+        background-position-x: 53%;
         background-position-y: 54%;
       }
       &__forms-checkbox:disabled+label::before {
@@ -230,12 +249,17 @@
         padding-bottom: 31px;
         padding-top: 50px;
       }
+    &__name-wrapper--mobile{
+        display: none;
+    }
     &__form-email,
     &__form-firstname,
     &__form-lastname,
     &__form-password,
+    &__form-password--signin,
     &__form-confirm,
-    &__form-recovery{
+    &__form-recovery,
+    &__form-name--mobile{
         @extend %inter-bold;
         @extend %color-bold;
         font-size: 14px;
@@ -275,7 +299,33 @@
         }
     }
 
-    &__form-emailImg{
+    &__form-passwordImg,
+    &__form-password{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 404px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/password-icon.svg');
+            right: 0;
+            top: -88px;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-password{
+        &:focus~.sign__form-passwordImg{
+            &::before{
+                background-image: url('../images/signUp/password-icon-active.svg');
+            }
+        }
+    }
+
+
+    &__form-passwordImg--signin{
         position: relative;
         &::after{
             content: '';
@@ -287,12 +337,12 @@
             margin: auto 0;
             width: 18px;
             height: 18px;
-            background-image: url('../images/signUp/confirm-icon-error.svg');
+            background-image: url('../images/signUp/confirm-icon.svg');
             background-repeat: no-repeat;
         }
     }
-    &__form-email{
-        &:focus~.sign__form-emailImg{
+    &__form-password--signin{
+        &:focus~.sign__form-passwordImg--signin{
             &::after{
                 content: '';
                 position: absolute;
@@ -303,7 +353,7 @@
                 margin: auto 0;
                 width: 18px;
                 height: 18px;
-                background-image: url('../images/signUp/confirm-icon.svg');
+                background-image: url('../images/signUp/confirm-icon-error.svg');
                 background-repeat: no-repeat;
             }
         }
@@ -367,7 +417,6 @@
             }
         }
     }
-
     &__form-lastnameImg,
     &__form-lastname{
         position: relative;
@@ -392,7 +441,6 @@
             }
         }
     }
-
     &__form-passwordImg,
     &__form-password{
         position: relative;
@@ -485,7 +533,8 @@
     &__form-firstname,
     &__form-lastname,
     &__form-password,
-    &__form-confirm{
+    &__form-confirm,
+    &__form-name--mobile{
         background: #FFFFFF;
         border: 1px solid #EDE8E9;
         border-radius: 8px;
@@ -509,7 +558,8 @@
         padding: 26px 50px 25px 20px;
     }
     &__form-password,
-    &__form-confirm{
+    &__form-confirm,
+    &__form-name--mobile{
         display: block;
         margin: 8px auto;
         width: 420px;
@@ -527,6 +577,29 @@
     &__password-icon{
         content: url(../images/signUp/password-icon.svg);
         position: relative;
+    }
+    &__form-nameImg--mobile{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 385px;
+            margin: auto 0;
+            width: 18px;
+            height: 18px;
+            background-image: url('../images/signUp/name-icon.svg');
+            right: 0;
+            top: -88px;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form-name--mobile{
+        &:focus~.sign__form-nameImg--mobile{
+            &::before{
+                background-image: url('../images/signUp/name-icon-active.svg');
+            }
+        }
     }
 }
 
@@ -547,7 +620,14 @@
         text-align: center;
         width: 420px;
         margin-top: 6px;
+        font-size: 14px;
+        line-height: 21px;
     }
+    &__google-mobile,
+            &__facebook-mobile,
+            &__twitter-mobile{
+                display: none;
+            }
     &__google,
     &__facebook,
     &__twitter{
@@ -650,5 +730,96 @@
                 right: 34px;
             }
         } 
+    }
+}
+
+.container-welcome{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.welcome{
+    &__title{
+        @extend %inter-Extra_bold;
+        @extend %color-bold;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+    }
+    &__text{
+        @extend %inter-regular;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+    }
+    &__select-text{
+        @extend %inter-bold;
+        @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__select-signup,
+    &__select-signin{
+        @extend %inter-bold;
+        @extend %color-bold;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: auto;
+    }
+    &__select-wrapper{
+        display: flex;
+        padding: 26px 25px 21px 18px;
+        width:100%;
+        margin: 0 auto;
+    }
+    &__select-link{
+        width: 100%;
+    }
+    &__img{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 37px;
+        padding-top: 206px;
+    }
+    &__select{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 227px;
+        margin-bottom: 40px;
+    }
+    &__select-link:active .welcome__select-signup{
+        color: #EB5E55;
+    }
+    &__select-link:active .welcome__select-signin{
+        color: #EB5E55;
+    }
+    &__select-item--signup{
+        &::before{
+            content: '';
+            width: 100%;
+            left: 0;
+            right: 0;
+            display: block;
+            border: 1px solid #EEEEEE;
+        }
+    }
+    &__select-item--signin{
+        &::before{
+            content: '';
+            width: 100%;
+            left: 0;
+            right: 0;
+            display: block;
+            border: 1px solid #EEEEEE;
+        }
+        &::after{
+            content: '';
+            width: 100%;
+            left: 0;
+            right: 0;
+            display: block;
+            border: 1px solid #EEEEEE;
+        }
     }
 }

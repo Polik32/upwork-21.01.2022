@@ -1,13 +1,43 @@
 @media (max-width: 1366px){
     .container-main {
-        margin-top: 20px;
+        margin-top: 10px;
+        &-signup{
+            margin-top: 10px;
+        }
+        &-recovery{
+            margin-top: 1px;
+        }
     }
+
+    .header{
+        &__btn-sign{
+            padding: 10px 36px 10px 34px;
+        }
+        &__btn-back{
+            padding: 10px 26.5px 10px 49.5px;
+        }
+    }
+
     .sign{
+        &__title{
+            font-size: 32px;
+            line-height: 40px;
+        }
         &__input-wrapper{
-            margin-top: 22px;
+            margin-top: 18px;
         }
         &__form-terms{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .social{
+        &__google,
+        &__facebook,
+        &__twitter{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 4px;
         }
     }
 
@@ -23,45 +53,131 @@
 
 @media (max-width: 1024px){
     .container-main {
-        margin-top: 200px;
+        margin-top: 150px;
+        &-signup{
+            margin-top: 150px;
+        }
+    }
+}
+
+@media (max-device-width: 1024px) and (orientation: landscape){
+    .container-main {
+        margin-top: 50px;
+        &-signup{
+            margin-top: 50px;
+        }
     }
 }
 
 @media (max-width: 768px){
     .container-main {
-        margin-top: 50px;
+        margin-top: 100px;
+        &-signup{
+            margin-top: 100px;
+        }
     }
     .container {
         padding: 0 50px;
     }
 }
 
+@media (max-width: 640px){
+    .container {
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 480px){
+    .wrapper{
+        background-image: none;
+    }
     .container-main {
         margin-top: 125px;
+        width: 400px;
     }
-
+    .container-main-signup{
+        margin-top: 70px;
+    }
+    .container-main-mobile{
+        margin-top: 1px;
+    }
+    .container-main-signin{
+        margin-top: 76px;
+        width: 320px;
+    }
+    .container {
+        padding: 0 27px 0 28px;
+    }
+    .container-main-recovery{
+        margin-top: 100px;
+    }
     .header{
         &__sign-inner{
             flex-direction: row-reverse;
-            padding: 49px 0 20px 0;
+            padding: 40px 0 20px 0;
+            &--mobile{
+                flex-direction: row;
+            }
         }
-        &__btn-sign{
-            display: none;
+        &__link-back{
+            display: flex;
+            margin-right: auto;
         }
-        &__logo{
-            display: none;
+        &__link-img{
+            width: 18px;
+            height: 18px;
+            margin-top: 8.5px;
         }
-        &__logo-mobile{
+        &__btn-cancel{
             display: block;
-            width: 32px;
-            height: 32px;
+            padding: 12px 22px 12px 22px;
+        }
+        &__btn-sign,
+        &__btn-back{
+            display: none;
+        }
+        &__forms-logo{
+            display: none;
+        }
+        &__forms-logoMobile{
+            display: block;
+        }
+        &__logo-descktop{
+            display: none;
+        }
+    }
+
+    .main{
+        &__delimiter{
+            &::before{
+                content: url(../images/signUp/mobile/small-line.svg);
+                left: -63px;
+            }
+            &::after{
+                content: url(../images/signUp/mobile/small-line.svg);
+                left: 60px;
+            }
+        }
+    }
+
+    .form__big-btn{
+        padding: 14.5px 133px 14.5px 133px;
+    }
+    .form__confirm-btn{
+        display: none;
+        &--mobile{
+            display: block;
+            padding: 15px 111px 15px 111px;
         }
     }
 
     .sign{
         &__title{
             display: none;
+        }
+        &__text-finish{
+            width: 234px;
+            margin: 5px auto 90px auto;
         }
         &__title-mobile{
             display: block;
@@ -73,11 +189,615 @@
         }
         &__input-wrapper {
             margin-top: 144px;
-            margin-bottom: 31px;
+            margin-bottom: 30px;
+            width: 320px;
+        }
+        &__input-wrapper-signin{
+            margin-top: 100px;
+            margin-bottom: 5px;
+        }
+        &__input-wrapper-password{
+            margin-bottom: 35px;
         }
         &__form-terms {
-            margin-bottom: 31px;
+            margin-bottom: 30px;
+            margin-left: 60px;
+        }
+        &__form-terms-signin{
+            margin-left: 15px;
+        }
+        &__input-wrapper--recovery{
+            margin-top: 80px;
+            margin-bottom: 35px;
+        }
+        &__form-recoveryImg{
+            &::after{
+                left: 45px;
+            }
+        }
+        &__form-recovery{
+            &:focus~.sign__form-recoveryImg{
+                &::after{
+                    left: 45px;
+                }
+            }
+        }
+        &__form-img{
+            &::after{
+                left: 45px;
+            }
+        }
+        &__form-email{
+            &:focus~.sign__form-img{
+                &::after{
+                    left: 45px;
+                }
+            }
+        }
+        &__form-nameImg--mobile{
+            &::before{
+                top: -74px;
+            }
+        }
+        &__form-name--mobile{
+            &:focus~.sign__form-nameImg--mobile{
+                &::before{
+                    top: -74px;
+                }
+            }
+        }
+        &__form-passwordImg--signin{
+            &::after{
+                left: 45px;
+            }
+        }
+        &__form-password--signin{
+            &:focus~.sign__form-passwordImg--signin{
+                &::after{
+                    left: 45px;
+                }
+            }
+        }
+        &__firstname-wrapper,
+        &__lastname-wrapper{
+            display: none;
+        }
+        &__name-wrapper--mobile{
+            display: block;
+        }
+        &__input-wrapper-mobile{
+            width: 420px;
+            margin-bottom: 6px;
+            margin-top: 63px;
+        }
+        &__form-img--mobile{
+            left: 93px;
+        }
+        &__form-name--mobile{
+            margin-bottom: 6px;
+            margin-top: 6px;
+        }
+        &__form-password--mobile{
+            margin-top: 6px;
+        }
+        &__form-confirm--mobile{
+            margin-top: 12px;
+        }
+        &__form-yourself{
+            margin-left: 30px;
+            margin-top: 25px;
+        }
+    }
+    .social{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+            &__google,
+            &__facebook,
+            &__twitter{
+                display: none;
+            }
+            &__google-mobile,
+            &__facebook-mobile,
+            &__twitter-mobile{
+                display: block;
+                background: #FFFFFF;
+                border: 1px solid #EDE8E9;
+                border-radius: 10px;
+                padding: 18px 44px 18px 44px;
+                margin-right: 7px;
+            }
+            &__google-mobile,
+            &__facebook-mobile,
+            &__twitter-mobile{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto 0;
+                    width: 18px;
+                    height: 18px;  
+                    background-repeat: no-repeat;
+                }
+            }
+            &__google-mobile{
+                transition: color 0.2s;
+                &::before{
+                    background-image: url('../images/signUp/google.svg');
+                    top: 4px;
+                    left: 38px;
+                }
+                &:hover{
+                    transition: color 0.2s;
+                    &::before{
+                        transition: background-image 0.2s;
+                        background-image: url('../images/signUp/google-hover.svg');
+                    }
+                }
+                &:active{
+                    transition: color 0.2s;
+                    &::before{
+                        transition: background-image 0.2s;
+                        background-image: url('../images/signUp/google-active.svg');
+                    }
+                } 
+            }
+            &__facebook-mobile{
+                transition: color 0.4s;
+                &::before{
+                    background-image: url('../images/signUp/facebook.svg');
+                    top: 1px;
+                    left: 41px;
+                }
+                &:hover{
+                    transition: color 0.4s;
+                    &::before{
+                        transition: background-image 0.2s;
+                        background-image: url('../images/signUp/facebook-hover.svg');
+                    }
+                }
+                &:active{
+                    transition: color 0.4s;
+                    &::before{
+                        transition: background-image 0.4s;
+                        background-image: url('../images/signUp/facebook-active.svg');
+                    }
+                } 
+            }
+            &__twitter-mobile{
+                transition: color 0.4s;
+                &::before{
+                    background-image: url('../images/signUp/twitter.svg');
+                    top: 5px;
+                    left: 38px;
+                }
+                &:hover{
+                    transition: color 0.4s;
+                    &::before{
+                        transition: background-image 0.2s;
+                        background-image: url('../images/signUp/twitter-hover.svg');
+                    }
+                }
+                &:active{
+                    transition: color 0.4s;
+                    &::before{
+                        transition: background-image 0.4s;
+                        background-image: url('../images/signUp/twitter-active.svg');
+                    }
+                } 
+            }
+        }
+    .welcome{
+        &__img{
+            padding-top: 126px;
+        }
+        &__select{
+            margin-top: 127px;
         }
     }
 }
 
+@media (max-width: 414px){
+    .container-main {
+        margin-top: 130px;
+        width: 320px;
+    }
+    .container-main-signup{
+        margin-top: 45px;
+        width: 320px;
+    }
+    .container-main-signin{
+        margin-top: 76px;
+    }
+    .container-main-mobile{
+        margin-top: 70px;
+    }
+    .container-main-recovery{
+        margin-top: 100px;
+    }
+    .form__big-btn--mobile {
+        padding: 14.5px 128px 14.5px 128px;
+    }
+    .sign{
+        &__text-finish{
+            width: 234px;
+            margin: 5px auto 140px auto;
+        }
+        &__input-wrapper {
+            margin-top: 100px;
+            width: 320px;
+        }
+        &__form-terms {
+            margin-left: 15px;
+        }
+        &__input-wrapper-mobile{
+            width: 320px;
+            margin-bottom: 6px;
+            margin-top: 33px;
+        }
+        &__form-password,
+        &__form-confirm,
+        &__form-name--mobile{
+            width: 320px;
+        }
+        &__input-wrapper-signin{
+            margin-top: 80px;
+        }
+        &__input-wrapper--recovery{
+            margin-top: 50px;
+            margin-bottom: 35px;
+        }
+        &__form-img--mobile{
+            &::after{
+                left: -53px;
+            }
+        }
+        &__form-email--mobile{
+            &:focus~.sign__form-img--mobile{
+                &::after{
+                    left: -53px;
+                }
+            }
+        }
+        &__form-nameImg--mobile{
+            &::before{
+                left: 287px;
+            }
+        }
+        &__form-name--mobile{
+            &:focus~.sign__form-nameImg--mobile{
+                &::before{
+                    left: 287px;
+                }
+            }
+        }
+        &__form-passwordImg{
+            &::before{
+                left: 286px;
+            }
+        }
+        &__form-password{
+            &:focus~.sign__form-passwordImg{
+                &::before{
+                    left: 286px;
+                }
+            }
+        }
+        &__form-confirmImg{
+            &::before{
+                left: 285px;
+            }
+        }
+        &__form-confirm{
+            &:focus~.sign__form-confirmImg{
+                &::before{
+                    left: 285px;
+                }
+            }
+        }
+    }
+
+    .welcome{
+        &__img{
+            padding-top: 156px;
+        }
+        &__select{
+            margin-top: 187px;
+        }
+    }
+}
+
+@media (max-device-width: 390px) and (max-device-height: 850px){
+    .container-main {
+        margin-top: 149px;
+    }
+    .container-main-mobile{
+        margin-top: 70px;
+    }
+    .container-main-signup{
+        margin-top: 69px;
+    }
+    .container-main-signin{
+        margin-top: 76px;
+    }
+    .container-main-recovery{
+        margin-top: 114px;
+    }
+    .header{
+        &__sign-inner{
+            padding: 50px 0 20px 0;
+        }
+    }
+    .sign{
+        &__text-finish{
+            width: 234px;
+            margin: 5px auto 148px auto;
+        }
+        &__input-wrapper {
+            margin-top: 144px;
+            margin-bottom: 30px;
+        }
+        &__input-wrapper-mobile{
+            margin-bottom: 6px;
+            margin-top: 63px;
+        }
+        &__input-wrapper-signin{
+            margin-top: 100px;
+        }
+        &__input-wrapper--recovery{
+            margin-top: 80px;
+            margin-bottom: 35px;
+        }
+    }
+    .welcome{
+        &__img{
+            padding-top: 206px;
+        }
+        &__select{
+            margin-top: 227px;
+        }
+    }
+}
+
+@media (max-device-width: 375px) and (max-device-height: 690px){
+    .container-main {
+        margin-top: 50px;
+    }
+    .container-main-signup{
+        margin-top: 1px;
+    }
+    .container-main-mobile{
+        margin-top: 10px;
+    }
+    .header{
+        &__sign-inner{
+            padding: 30px 0 15px 0;
+        }
+    }
+    .form__big-btn--mobile {
+        padding: 14.5px 118px 14.5px 118px;
+    }
+    .sign{
+        &__text-finish{
+            width: 234px;
+            margin: 5px auto 130px auto;
+        }
+        &__input-wrapper {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        &__input-wrapper-mobile{
+            margin-bottom: 3px;
+            margin-top: 25px;
+        }
+        &__form-yourself{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+        &__form-name--mobile{
+            margin-bottom: 3px;
+            margin-top: 3px;
+        }
+        &__form-password--mobile{
+            margin-top: 3px;
+        }
+        &__form-confirm--mobile{
+            margin-top: 6px;
+        }
+        &__form-img--mobile{
+            &::after{
+                left: -64px;
+            }
+        }
+        &__form-email--mobile{
+            &:focus~.sign__form-img--mobile{
+                &::after{
+                    left: -64px;
+                }
+            }
+        }
+        &__form-nameImg--mobile{
+            &::before{
+                left: 275px;
+                top: -60px;
+            }
+        }
+        &__form-name--mobile{
+            &:focus~.sign__form-nameImg--mobile{
+                &::before{
+                    left: 275px;
+                    top: -60px;
+                }
+            }
+        }
+        &__form-passwordImg{
+            &::before{
+                left: 276px;
+                top: -73px;
+            }
+        }
+        &__form-password{
+            &:focus~.sign__form-passwordImg{
+                &::before{
+                    left: 276px;
+                    top: -73px;
+                }
+            }
+        }
+        &__form-confirmImg{
+            &::before{
+                left: 275px;
+                top: -73px;
+            }
+        }
+        &__form-confirm{
+            &:focus~.sign__form-confirmImg{
+                &::before{
+                    left: 275px;
+                    top: -73px;
+                }
+            }
+        }
+    }
+    .welcome{
+        &__img{
+            padding-top: 126px;
+        }
+        &__select{
+            margin-top: 127px;
+        }
+    }
+}
+
+@media (max-width: 320px){
+    .container-main {
+        margin-top: 10px;
+    }
+    .container-main-mobile{
+        margin-top: 1px;
+    }
+    .form__confirm-btn--mobile {
+        padding: 15px 90px 15px 90px;
+    }
+    .form__big-btn--signin,
+    .form__big-btn-signup{
+        padding: 14.5px 130px 14.5px 130px;
+    }
+    .form__big-btn--recovery{
+        padding: 14.5px 128px 14.5px 128px;
+    }
+    .sign{
+        &__text-finish{
+            width: 234px;
+            margin: 5px auto 40px auto;
+        }
+        &__input-wrapper {
+            margin-top: 15px;
+            margin-bottom: 3px;
+            padding-top: 6px;
+            padding-bottom: 9px;
+        }
+        &__input-wrapper {
+            width: 300px;
+        }
+        &__input-wrapper-mobile{
+            width: 300px;
+        }
+        &__form-password,
+        &__form-confirm,
+        &__form-name--mobile{
+            width: 300px;
+            padding: 19px 140px 18px 20px;
+        }
+        &__input-wrapper--recovery{
+            margin-bottom: 10px;
+        }
+        &__form-img{
+            &::after{
+                left: 20px;
+            }
+        }
+        &__form-email{
+            &:focus~.sign__form-img{
+                &::after{
+                    left: 20px;
+                }
+            }
+        }
+        &__form-img--signin{
+            &::after{
+                left: 25px;
+            }
+        }
+        &__form-email--signin{
+            &:focus~.sign__form-img--signin{
+                &::after{
+                    left: 25px;
+                }
+            }
+        }
+        &__form-passwordImg--signin{
+            &::after{
+                left: 25px;
+            }
+        }
+        &__form-password--signin{
+            &:focus~.sign__form-passwordImg--signin{
+                &::after{
+                    left: 25px;
+                }
+            }
+        }
+        &__form-img--mobile{
+            &::after{
+                left: -73px;
+            }
+        }
+        &__form-email--mobile{
+            &:focus~.sign__form-img--mobile{
+                &::after{
+                    left: -73px;
+                }
+            }
+        }
+        &__form-nameImg--mobile{
+            &::before{
+                left: 265px;
+                top: -60px;
+            }
+        }
+        &__form-name--mobile{
+            &:focus~.sign__form-nameImg--mobile{
+                &::before{
+                    left: 265px;
+                    top: -60px;
+                }
+            }
+        }
+        &__form-recoveryImg{
+            &::after{
+                left: 25px;
+            }
+        }
+        &__form-recovery{
+            &:focus~.sign__form-recoveryImg{
+                &::after{
+                    left: 25px;
+                }
+            }
+        }
+    }
+    .welcome{
+        &__img{
+            padding-top: 80px;
+        }
+        &__select{
+            margin-top: 90px;
+        }
+    }
+}

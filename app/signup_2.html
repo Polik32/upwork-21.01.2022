@@ -12,14 +12,15 @@
     <div class="wrapper">
     <header class="header__sign">
         <div class="container">
-            <div class="header__sign-inner">
-                <a class="logo" href="#">
+            <div class="header__sign-inner header__sign-inner--mobile">
+                <a class="header__logo-descktop" href="#">
                     <img class="logo__link" src="images/signUp/logo-full.svg">
                 </a>
                 <div class="header__btn-wrapper">
                     <button class="header__btn-back">Back</button>
                     <button class="header__btn-sign">Sign In</button>
                 </div>
+                <button class="header__btn-cancel">Cancel</button>
             </div>
         </div>
     </header>
@@ -27,12 +28,13 @@
         <div class="container-main-signup">
             <div class="sign">
                 <h2 class="sign__title">Tell us more about yourself</h2>
+                <h2 class="sign__title-mobile">Tell us more</h2>
                 <p class="sign__text">Enter your details to proceed further</p>
                 <form class="sign__form" action="#">
-                    <div class="sign__input-wrapper">
+                    <div class="sign__input-wrapper sign__input-wrapper-mobile">
                         <p class="sign__input-title">Email</p>
-                        <input class="sign__form-email" type="email" placeholder="Start typing …" value="catherine.shaw@gmail.com">
-                        <span class="sign__form-img"></span>
+                        <input class="sign__form-email sign__form-email--mobile" type="email" placeholder="Start typing …" value="catherine.shaw@gmail.com">
+                        <span class="sign__form-img sign__form-img--mobile"></span>
                     </div>
                         <div class="sign__form-wrapper">
                             <div class="sign__firstname-wrapper">
@@ -43,13 +45,17 @@
                                 <input class="sign__form-lastname" type="text" placeholder="Last name">
                                 <span class="sign__form-lastnameImg"></span>
                             </div>
+                            <div class="sign__name-wrapper--mobile">
+                                <input class="sign__form-name--mobile" type="text" placeholder="First and Last name">
+                                <span class="sign__form-nameImg--mobile"></span>
+                            </div>
                         </div>
                         <div class="sign__password-wrapper">
-                            <input class="sign__form-password" type="password" placeholder="Password" required>
+                            <input class="sign__form-password sign__form-password--mobile" type="password" placeholder="Password" required>
                             <span class="sign__form-passwordImg"></span>
                         </div>
                         <div class="sign__confirm-wrapper">
-                            <input class="sign__form-confirm" type="password" id="checkPass" placeholder="Confirm password" required>
+                            <input class="sign__form-confirm sign__form-confirm--mobile" type="password" id="checkPass" placeholder="Confirm password" required>
                             <span class="sign__form-confirmImg" id="confirm"></span>
                         </div>
                         <div class="sign__form-terms sign__form-yourself">
@@ -57,7 +63,7 @@
                             <label for="forms-checkbox"></label>
                             <span class="sign__form-text">I agree with terms & conditions</span>
                         </div>
-                    <button class="form__big-btn" type="submit" id="submit">Continue</button>
+                    <button class="form__big-btn form__big-btn--mobile" type="submit" id="submit">Continue</button>
                 </form>
             </div>
         </div>
