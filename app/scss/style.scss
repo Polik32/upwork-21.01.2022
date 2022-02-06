@@ -606,22 +606,44 @@
     //     bottom: 0;
     //     position:absolute;
     // }
-    // &__title-wrap--active{
-    //     position: relative;
-    // }
-    // &__title-wrap--active::after{
-    //         content: url(../images/availability/verified-icon.png);
-    //         left: 0;
-    //         top: 0;
-    //         right: 0;
-    //         bottom: 0;
-    //         position:absolute;
-    // }
-    // &__item-info.availability__item-info--active{
-    //     .availability__item--active{
-    //         display: block;
-    //     }
-    // }
+
+    &__custom-radio{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    &__custom-radio+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    &__custom-radio+label::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 10px;
+        right: 8px;
+        top: 5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        background: linear-gradient(0deg, rgba(58, 51, 53, 0.04), rgba(58, 51, 53, 0.04)), #FFFFFF;
+        cursor: pointer;
+      }
+      &__custom-radio:checked+label::before {
+        background-color: #C6D8D3;
+        background-image: url("../images/signUp/checked.png");
+        background-repeat: no-repeat;
+        background-position-x: 53%;
+        background-position-y: 54%;
+      }
+      &__custom-radio:disabled+label::before {
+        background-color: #e9ecef;
+      }
     &__inner{
         &::before{
             content: url(../images/big-line.svg);

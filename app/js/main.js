@@ -6,7 +6,7 @@ $(function() {
  
 function f_acc(){
 //скрываем все кроме того, что должны открыть
-  $('.availability__item').not($(this).next());
+  // $('.availability__item-info').not($(this).next());
 // открываем или скрываем блок под заголовком, по которому кликнули
     
     $(this).next().slideToggle(500);
