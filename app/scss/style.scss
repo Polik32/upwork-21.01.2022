@@ -644,6 +644,9 @@
       &__custom-radio:disabled+label::before {
         background-color: #e9ecef;
       }
+
+        
+      
     &__inner{
         &::before{
             content: url(../images/big-line.svg);
