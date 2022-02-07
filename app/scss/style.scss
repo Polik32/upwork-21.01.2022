@@ -595,18 +595,6 @@
 }
 
 .availability{
-    // &__title-wrap{
-    //     position: relative;
-    // }
-    // &__title-wrap::before{
-    //     content: url(../images/availability/btn.png);
-    //     left: 0;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     position:absolute;
-    // }
-
     &__custom-radio{
         position: absolute;
         z-index: -1;
@@ -626,8 +614,8 @@
         flex-shrink: 0;
         flex-grow: 0;
         border-radius: 10px;
-        right: 8px;
-        top: 5px;
+        right: 10px;
+        top: 0px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
@@ -684,12 +672,13 @@
     }
     &__title-wrap{
         display: flex;
-        padding-left: 40px;
+        padding-left: 20px;
     }
     &__item-title{
         @extend %inter-bold;
         @extend %color-bold;
         font-size: 14px;
+        margin-left: 5px;
     }
     &__item-price{
         @extend %inter-bold;
@@ -883,6 +872,57 @@
         border-radius: 8px;
         margin-bottom: 10px;
     }
+
+    &__calendar{ 
+        position: relative;
+        width: 104px;
+        height: 20px;
+        font-size: 14px;
+        @extend %inter-bold;
+        @extend %color-bold;
+        &:before{
+            position: absolute;
+            top: 0;
+            left: 20px;
+            content: attr(data-date);
+        }
+        &::-webkit-datetime-edit,
+        &::-webkit-inner-spin-button,
+        &::-webkit-clear-button{
+            display: none;
+        }
+        &::-webkit-calendar-picker-indicator{
+            position: absolute;
+            top: -3px;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+        }
+        &::-moz-datetime-edit,
+        &::-moz-inner-spin-button,
+        &::-moz-clear-button{
+            display: none;
+        }
+        &::-moz-calendar-picker-indicator{
+            position: absolute;
+            top: -3px;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            opacity: 0;
+        }
+        &::after{
+            position: relative;
+            content: url(../images/availability/arrow-check-date.svg);
+            left: 240px;
+            top: 3px;
+            z-index: 1;
+        }
+    }
     &__check-text,
     &__check-roomsNumber,
     &__check-guestNumber{
@@ -902,6 +942,8 @@
         padding-top: 3px;
         padding-left: 20px;
         padding-bottom: 17px;
+        margin-bottom: 17px;
+        margin-top: 3px;
         width: 92%;
     }
     &__check-titleNumber{
