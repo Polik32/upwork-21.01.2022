@@ -4,6 +4,7 @@
 @import 'libs';
 @import 'global';
 
+
 .header{
     width: 100%;
     box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.15);
@@ -14,9 +15,12 @@
     &__logo{
         max-width: 44px;
     }
+    &__user{
+        margin-left: auto;
+    }
     &__form{
         margin-left: 17px;
-        margin-right: 321px;
+        margin-right: 0;
         border: 1px solid #EDE8E9;
         border-radius: 8px;
         max-width: 718px;
@@ -1099,41 +1103,123 @@
         margin-top: 18px;
         width: 293px;
         &--until{
-            display: none;
+            display: block;
+            animation-name: open;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
         }
         &--from{
             display: none;
+            animation-name: open;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
         }
     }
     &__item-info--checkIn{
         display: flex;
         margin-top: 19px;
         :checked~.rules__item-text--until{
-            display: block;
+            display: none;
+            animation-name: open;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
         }
-        :not(:checked) ~.rules__item-text--from{
+        :checked~.rules__item-text--from{
             display: block;
+            animation-name: open;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
         }
     }
-    // &__item-info--checkIn{
-    //     :not(:checked) ~.rules__item-text--until{
-    //         display: block;
-    //     }
-    // }
-    // &__item-info--checkOut{
-    //     display: flex;
-    //     margin-top: 19px;
-    //     :checked~.rules__item-text--from{
-    //         display: block;
-    //     }
-    //     :not(:checked) ~.rules__item-text--until{
-    //         display: none;
-    //     }
-    // }
-
-    // &__item-progress{
-    //     width: 74px;
-    // }
+    &__item-info--checkOut{
+        display: flex;
+        margin-top: 19px;
+        :checked~.rules__item-text--until{
+            display: none;
+            animation-name: open;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
+        }
+        :checked~.rules__item-text--from{
+            display: block;
+            animation-name: open;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
+        }
+    }
+    &__item-checkbox{
+        margin:0 auto;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    &__item-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    &__item-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 74px;
+        height: 5px;
+        border-radius: 3px;
+        right: 0;
+        left: 0;
+        top: 0;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #2AC084;
+        cursor: pointer;
+      }
+      &__item-checkbox+label::after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 37px;
+        height: 5px;
+        border-radius: 3px;
+        right: 0;
+        left: -38px;
+        top: 0;
+        background: #2AC084;
+        cursor: pointer;
+      }
+      &__item-checkbox:checked+label::after {
+        left: -74px;
+        transition: all 0.5s;
+      }
+      &__item-checkbox:not(:checked)+label::after {
+        left: -38px;
+        transition: all 0.5s;
+      }
+      &__item-lable{
+          order: 2;
+          margin-left: auto;
+      }
 }
 
 .reviews{
@@ -1274,22 +1360,6 @@
         background: #EB5E55;
     }
 }
-
-@keyframes load-positive {
-    0% { width: 0; }
-    100% { width: 80%;}
-}
-
-@keyframes load-neutral {
-    0% { width: 0; }
-    100% { width: 60%;}
-}
-
-@keyframes load-negative {
-    0% { width: 0; }
-    100% { width: 20%;}
-}
-
 .comment{
     width: 750px;
     &:not(:first-child)::before{
@@ -1784,3 +1854,5 @@
 @import 'forms';
 @import 'media';
 @import 'media-forms';
+@import 'media-listing';
+@import 'animation';

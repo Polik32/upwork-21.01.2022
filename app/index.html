@@ -41,7 +41,7 @@
             <a class="apartment__images-third" data-fancybox="gallery-a" href="images/content/location-photo-3.png">
                 <img class="apartment__images-third" src="images/content/location-photo-3.png" alt="image">
             </a>
-            <a data-fancybox="gallery-a" href="images/content/location-photo-4.png">
+            <a class="apartment__images-fourth" data-fancybox="gallery-a" href="images/content/location-photo-4.png">
                 <span id="base-img" class="base-img__info"></span>
                 <img class="apartment__images-four rounded" src="images/content/location-photo-4.png" alt="image">
             </a>
@@ -504,10 +504,10 @@
                         <h6 class="rules__item-checkIn">Check-in</h6>
                     </div>
                     <div class="rules__item-info--checkIn">
-                        <input type="checkbox">
+                        <input class="rules__item-checkbox" type="checkbox" id="checkbox-checkIn" checked>
+                        <label class="rules__item-lable" for="checkbox-checkIn"></label>
                         <p class="rules__item-text--until">Until 12:00 hours</p>
                         <p class="rules__item-text--from">From 14:00 hours</p>
-                        <!-- <progress class="rules__item-progress"></progress> -->
                     </div>
                 </div>
                 <div class="rules__item">
@@ -530,10 +530,10 @@
                         <h6 class="rules__item-checkOut">Check-out</h6>
                     </div>
                     <div class="rules__item-info--checkOut">
-                        <input type="checkbox">
+                        <input class="rules__item-checkbox" type="checkbox" id="checkbox-checkOut">
+                        <label class="rules__item-lable" for="checkbox-checkOut"></label>
                         <p class="rules__item-text--from">From 14:00 hours</p>
                         <p class="rules__item-text--until">Until 12:00 hours</p>
-                        <!-- <progress class="rules__item-progress" max="100" value="50"></progress> -->
                     </div>
                 </div>
                 <div class="rules__item">

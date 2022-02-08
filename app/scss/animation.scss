@@ -1,0 +1,27 @@
+@keyframes open {
+    0% {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+@keyframes load-positive {
+    0% { width: 0; }
+    100% { width: 80%;}
+}
+
+@keyframes load-neutral {
+    0% { width: 0; }
+    100% { width: 60%;}
+}
+
+@keyframes load-negative {
+    0% { width: 0; }
+    100% { width: 20%;}
+}
