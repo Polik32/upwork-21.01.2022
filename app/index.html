@@ -503,9 +503,11 @@
                     <div class="rules__item-wrapperTitle">
                         <h6 class="rules__item-checkIn">Check-in</h6>
                     </div>
-                    <div class="rules__item-info">
-                        <p class="rules__item-text">From 14:00 hours</p>
-                        <progress class="rules__item-progress"></progress>
+                    <div class="rules__item-info--checkIn">
+                        <input type="checkbox">
+                        <p class="rules__item-text--until">Until 12:00 hours</p>
+                        <p class="rules__item-text--from">From 14:00 hours</p>
+                        <!-- <progress class="rules__item-progress"></progress> -->
                     </div>
                 </div>
                 <div class="rules__item">
@@ -527,9 +529,11 @@
                     <div class="rules__item-wrapperTitle">
                         <h6 class="rules__item-checkOut">Check-out</h6>
                     </div>
-                    <div class="rules__item-info">
-                        <p class="rules__item-text">Until 12:00 hours</p>
-                        <progress class="rules__item-progress" max="100" value="50"></progress>
+                    <div class="rules__item-info--checkOut">
+                        <input type="checkbox">
+                        <p class="rules__item-text--from">From 14:00 hours</p>
+                        <p class="rules__item-text--until">Until 12:00 hours</p>
+                        <!-- <progress class="rules__item-progress" max="100" value="50"></progress> -->
                     </div>
                 </div>
                 <div class="rules__item">
@@ -656,7 +660,9 @@
                             </div>
                             <div class="progress__item-percent">
                                 <p>80%</p>
-                                <progress max="100" value="80"></progress>
+                                <div class="progress__value--positive">
+                                    <div class="progress__value-active--positive"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="progress__item">
@@ -666,7 +672,9 @@
                             </div>
                             <div class="progress__item-percent">
                                 <p>15%</p>
-                                <progress max="100" value="15"></progress>
+                                <div class="progress__value--neutral">
+                                    <div class="progress__value-active--neutral"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="progress__item">
@@ -676,7 +684,9 @@
                             </div>
                             <div class="progress__item-percent">
                                 <p>5%</p>
-                                <progress max="100" value="5"></progress>
+                                <div class="progress__value--negative">
+                                    <div class="progress__value-active--negative"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

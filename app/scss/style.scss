@@ -632,9 +632,7 @@
       &__custom-radio:disabled+label::before {
         background-color: #e9ecef;
       }
-
-        
-      
+  
     &__inner{
         &::before{
             content: url(../images/big-line.svg);
@@ -1093,10 +1091,6 @@
     &__item{
         margin-bottom: 34px;
     }
-    &__item-info{
-        display: flex;
-        margin-top: 19px;
-    }
     &__item-text{
         @extend %inter-regular;
         @extend %color-bold;
@@ -1104,10 +1098,42 @@
         line-height: 21px;
         margin-top: 18px;
         width: 293px;
+        &--until{
+            display: none;
+        }
+        &--from{
+            display: none;
+        }
     }
-    &__item-progress{
-        width: 74px;
+    &__item-info--checkIn{
+        display: flex;
+        margin-top: 19px;
+        :checked~.rules__item-text--until{
+            display: block;
+        }
+        :not(:checked) ~.rules__item-text--from{
+            display: block;
+        }
     }
+    // &__item-info--checkIn{
+    //     :not(:checked) ~.rules__item-text--until{
+    //         display: block;
+    //     }
+    // }
+    // &__item-info--checkOut{
+    //     display: flex;
+    //     margin-top: 19px;
+    //     :checked~.rules__item-text--from{
+    //         display: block;
+    //     }
+    //     :not(:checked) ~.rules__item-text--until{
+    //         display: none;
+    //     }
+    // }
+
+    // &__item-progress{
+    //     width: 74px;
+    // }
 }
 
 .reviews{
@@ -1198,9 +1224,6 @@
         line-height: 21px;
     }
     &__item-percent{
-        margin-left: auto;
-    }
-    &__item-percent p{
         display: table;
         @extend %inter-bold;
         @extend %color-bold;
@@ -1208,10 +1231,63 @@
         line-height: 24px;
         margin-left: auto;
     }
-    &__item-percent progress{
-        transform: rotate(180deg);
-        width: 56px;
+    &__item-percent p{
+        text-align: right;
+        margin-bottom: 10px;
     }
+    &__value--positive,
+    &__value--neutral,
+    &__value--negative{
+        align-items: center;
+        position: relative;
+        height: 4px;
+        width: 56px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #2AC084;
+        border-radius: 3px;
+    }
+    &__value--neutral{
+        background: linear-gradient(0deg, rgba(253, 240, 213, 0.3), rgba(253, 240, 213, 0.3)), #FFFFFF;
+    }
+    &__value--negative{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #EB5E55;
+    }
+    &__value-active--positive,
+    &__value-active--neutral,
+    &__value-active--negative{
+        animation: load 3s normal forwards;
+        border-radius: 3px;
+        height: 4px;
+        width: 0;
+        float: right;
+        width: 0;
+    }
+    &__value-active--positive{
+        animation: load-positive 2s normal forwards;
+        background: #2AC084;
+    }
+    &__value-active--neutral{
+        animation: load-neutral 2s normal forwards;
+        background: #FDF0D5;
+    }
+    &__value-active--negative{
+        animation: load-negative 2s normal forwards;
+        background: #EB5E55;
+    }
+}
+
+@keyframes load-positive {
+    0% { width: 0; }
+    100% { width: 80%;}
+}
+
+@keyframes load-neutral {
+    0% { width: 0; }
+    100% { width: 60%;}
+}
+
+@keyframes load-negative {
+    0% { width: 0; }
+    100% { width: 20%;}
 }
 
 .comment{
