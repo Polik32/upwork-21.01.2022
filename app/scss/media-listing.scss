@@ -1,6 +1,78 @@
-@media (max-width: 1440px){
-    .container{
-        padding-right: 100px;
+// @media (min-width: 1920px){
+//     .container {
+//         padding: 0px 150px;
+//     }
+// }
+// @media (max-width: 1920px){
+//     .container {
+//         padding: 0px 150px;
+//     }
+// }
+@media (max-width: 1200px){
+    .container {
+        padding: 0px 100px;
     }
+    .header{
+        &__form{
+            &:before{
+                left: 430px;
+            }
+            &:after{
+                left: 569px;
+            }
+        }
+        &__user{
+            &:before{
+                left: 680px;
+            }
+        } 
+    }
+}
 
+@media (max-width: 1024px){
+    .container {
+        padding: 0px 40px;
+    }
+    .header{
+        &__form{
+            margin-left: 10px;
+            &:before{
+                left: 293px;
+                background: black;
+            }
+            &:after{
+                left: 432px;
+                background: black;
+            }
+        }
+        &__user{
+            &:before{
+                left: 543px;
+                background: black;
+            }
+        }
+        &__form-location{
+            max-width: 200px;
+            padding: 12px 30px 11px 20px;
+        }
+        &__form-guests {
+            padding: 12px 25px 11px 19.5px;
+            text-align: center;
+        } 
+    }
+}
+
+@media (max-width: 850px){
+    .apartment{
+        &__base-img{
+            top: 87px;
+            left: 43px;        
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .container {
+        padding: 0px 30px;
+    }
 }
