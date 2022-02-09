@@ -141,10 +141,11 @@
 }
 
 .apartment{
+    display: flex;
     margin-top: 32px;
     &__images{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        // grid-template-columns: repeat(4, 1fr);
         grid-gap: 28px;
         max-width: 1140px;
         max-height: 488px;
@@ -174,7 +175,7 @@
         grid-row-start: 2;
         grid-row-end: 3;
     }
-    &__images-four{
+    &__images-fourth{
         grid-column-start: 4;
         grid-column-end: 5;
         grid-row-start: 2;
@@ -1103,6 +1104,10 @@
         margin-top: 18px;
         width: 293px;
         &--until{
+            @extend %inter-regular;
+            @extend %color-bold;
+            font-size: 14px;
+            line-height: 21px;
             display: block;
             animation-name: open;
             animation-duration: 1s;
@@ -1113,6 +1118,10 @@
             animation-delay: 0s;
         }
         &--from{
+            @extend %inter-regular;
+            @extend %color-bold;
+            font-size: 14px;
+            line-height: 21px;
             display: none;
             animation-name: open;
             animation-duration: 1s;
