@@ -21,6 +21,7 @@
         margin-left: auto;
     }
     &__form{
+        position: relative;
         margin-left: 17px;
         margin-right: 0;
         border: 1px solid #EDE8E9;
@@ -29,20 +30,20 @@
         &:before{
             position: absolute;
             content: '';
-            top: 15px;
-            left: 480px;
+            left: 271px;
             width: 1px;
             height: 46px;
             background: #EDE8E9;
+            z-index: 5;
         }
         &:after{
             position: absolute;
             content: '';
-            top: 15px;
-            left: 609px;
+            left: 400px;
             width: 1px;
             height: 46px;
             background: #EDE8E9;
+            z-index: 5;
         }
     }
     &__form-wrapper{
@@ -121,6 +122,17 @@
             bottom: 0;
             position: relative;
         }
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 515px;
+            right: 0;
+            width: 1px;
+            height: 46px;
+            background: #EDE8E9;
+            z-index: 5;
+        }
     }
     &__form-location{
         @extend %inter-bold;
@@ -138,19 +150,7 @@
         padding: 12px 46px 11px 19.5px;
         text-align: center;
     }
-    &__user{
-        &:before{
-            position: absolute;
-            content: '';
-            top: 15px;
-            left: 730px;
-            width: 1px;
-            height: 46px;
-            background: #EDE8E9;
-        }
-    } 
 }
-
 .apartment{
     display: flex;
     margin-top: 32px;
@@ -325,12 +325,13 @@
         height: 48px;
         background: linear-gradient(0deg, rgba(198, 216, 211, 0.3), rgba(198, 216, 211, 0.3)), #FFFFFF;
         border-radius: 4px;
+        position: relative;
         &::before{
             top: 14px;
             left: 14px;
             bottom: 0;
             right: 0;
-            position: relative;
+            position: absolute;
         }
     }
     &__logo-home{

@@ -1,34 +1,8 @@
-// @media (min-width: 1920px){
-//     .container {
-//         padding: 0px 150px;
-//     }
-// }
-// @media (max-width: 1920px){
-//     .container {
-//         padding: 0px 150px;
-//     }
-// }
 @media (max-width: 1200px){
     .container {
         padding: 0px 100px;
     }
-    .header{
-        &__form{
-            &:before{
-                left: 430px;
-            }
-            &:after{
-                left: 569px;
-            }
-        }
-        &__user{
-            &:before{
-                left: 680px;
-            }
-        } 
-    }
 }
-
 @media (max-width: 1024px){
     .container {
         padding: 0px 40px;
@@ -37,18 +11,15 @@
         &__form{
             margin-left: 10px;
             &:before{
-                left: 293px;
-                background: black;
+                left: 200px;
             }
             &:after{
-                left: 432px;
-                background: black;
+                left: 329px;
             }
         }
-        &__user{
-            &:before{
-                left: 543px;
-                background: black;
+        &__form-btn{
+            &::after{
+                left: 454px;
             }
         }
         &__form-location{
@@ -71,8 +42,47 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 810px){
     .container {
-        padding: 0px 30px;
+        padding: 0px 25px;
+    }
+    .header{
+        &__form{
+            margin-left: 5px;
+            &:before{
+                left: 125px;
+            }
+            &:after{
+                left: 250px;
+            }
+        }
+        &__form-btn{
+            &::after{
+                left: 370px;
+            }
+        }
+        &__form-location{
+            max-width: 120px;
+            padding: 12px 10px 11px 10px;
+        }
+        &__form-guests {
+            padding: 12px 5px 11px 46.5px;
+            max-width: 105px;
+        } 
+    }
+}
+
+@media (max-width: 768px){
+    .features{
+        &__logo-home,
+        &__logo-guests,
+        &__logo-bedrooms,
+        &__logo-policy{
+            width: 68px;
+            height: 48px;
+        }
+        &__item-wrapper {
+            margin-left: 12px;
+        }
     }
 }
