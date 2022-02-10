@@ -1,6 +1,45 @@
+@media (max-width: 1366px){
+    .about{
+        &__info{
+            padding-right: 50px;
+            position: relative;
+        }
+        &__service-item{
+            margin-bottom: 20px;
+        }
+        &__btn{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    iframe{
+        width: 340px;
+    }
+    .property{
+        &__item{
+            min-width: 273px;
+        }
+    }
+}
 @media (max-width: 1200px){
     .container {
         padding: 0px 100px;
+    }
+    iframe{
+        width: 320px;
+    }
+    .about{
+        &__services{
+            margin-top: 30px;
+        }
+    }
+    .property{
+        &__item{
+            min-width: 263px;
+        }
+        &__item-location{
+            font-size: 13px;
+        }
     }
 }
 @media (max-width: 1024px){
@@ -31,6 +70,45 @@
             text-align: center;
         } 
     }
+    .features{
+        &__title{
+            font-size: 12px;
+        }
+        &__info{
+            font-size: 12px;
+        }
+    }
+    .about{
+        &__text{
+            font-size: 13px;
+        }
+        &__info{
+            padding-right: 30px;
+        }
+        &__service-item{
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+    }
+    iframe{
+        width: 320px;
+    }
+    .property{
+        &__text{
+            font-size: 13px;
+        }
+        &__item{
+            min-width: 233px;
+        }
+        &__item-title{
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        &__item-location{
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 @media (max-width: 850px){
@@ -38,6 +116,51 @@
         &__base-img{
             top: 87px;
             left: 43px;        
+        }
+    }
+    .features{
+        &__logo-home,
+        &__logo-guests,
+        &__logo-bedrooms,
+        &__logo-policy{
+            &::before{
+                left: 13px;
+            }
+        }
+        &__logo-policy{
+            &::before{
+                left: 15.5px;
+            }
+        }
+    }
+    .about{
+        &__text{
+            font-size: 12.5px;
+        }
+        &__info{
+            padding-right: 20px;
+        }
+        &__service-item{
+            font-size: 12.5px;
+        }
+    }
+    iframe{
+        width: 280px;
+    }
+    .property{
+        &__text{
+            font-size: 12px;
+        }
+        &__item{
+            min-width: 223px;
+        }
+        &__item-title{
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+        &__item-location{
+            font-size: 12px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -70,6 +193,16 @@
             max-width: 105px;
         } 
     }
+    .features{
+        &__logo-policy{
+            &::before{
+                left: 14.5px;
+            }
+        }
+        &__item-wrapper{
+            margin-left: 10px;
+        }
+    }
 }
 
 @media (max-width: 768px){
@@ -78,8 +211,9 @@
         &__logo-guests,
         &__logo-bedrooms,
         &__logo-policy{
-            width: 68px;
-            height: 48px;
+            &::before{
+                left: 12px;
+            }
         }
         &__item-wrapper {
             margin-left: 12px;

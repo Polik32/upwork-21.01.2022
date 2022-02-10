@@ -147,7 +147,7 @@
         line-height: 21px;
         @extend %color-light;
         max-width: 154px;
-        padding: 12px 46px 11px 19.5px;
+        padding: 12px 26px 11px 39.5px;
         text-align: center;
     }
 }
@@ -312,10 +312,14 @@
     &__title{
         @extend %inter-bold;
         @extend %color-bold;
+        font-size: 14px;
+        line-height: 21px;
     }
     &__info{
         @extend %inter-regular;
         @extend %color-light;
+        font-size: 14px;
+        line-height: 21px;
     }
     &__logo-home,
     &__logo-guests,
@@ -363,6 +367,9 @@
         margin-top: 83px;
     }
     &__services{
+        display: flex;
+        justify-content: space-between;
+        max-width: 675px;
         margin-top: 50px;
         margin-bottom: 12px;
     }
@@ -381,11 +388,6 @@
         @extend %color-light;
         font-size: 14px;
         line-height: 21px;
-    }
-    &__services{
-        display: flex;
-        justify-content: space-between;
-        max-width: 675px;
     }
     &__service-item{
         @extend %color-bold;
@@ -928,9 +930,9 @@
             opacity: 0;
         }
         &::after{
-            position: relative;
+            position: absolute;
             content: url(../images/availability/arrow-check-date.svg);
-            left: 240px;
+            right: 5px;
             top: 3px;
             z-index: 1;
         }
