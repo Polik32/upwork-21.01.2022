@@ -703,13 +703,17 @@
     &__item-info{
         display: none;
         padding-left: 20px;
+        position: relative;
         &::before{
-            content: url(../images/small-line.svg);
-            top: 0;
-            left: -12px;
+            content: '';
+            height: 1px;
+            width: 100%;
+            top: -17px;
+            left: 6px;
             bottom: 0;
             right: 0;
-            position: relative;
+            background-color: #EDE8E9;
+            position: absolute;
         }
     }    
     &__item-bed,
@@ -734,7 +738,7 @@
         }
     }
     &__item-bed{
-        margin-top: 19px;
+        margin-top: 45px;
         &::before{
             content: url(../images/availability/bed.svg);
         }
@@ -846,6 +850,7 @@
     }
     &__user-avatar{
         width: 48px;
+        object-fit: contain;
     }
     &__user-name{
         @extend %inter-bold;
@@ -1028,7 +1033,7 @@
         @extend %color-light;
         font-size: 14px;
         line-height: 21px;
-        width: 786px;
+        max-width: 786px;
         margin-top: 12px;
     }
     &__item-checkIn,
@@ -1113,7 +1118,7 @@
         font-size: 14px;
         line-height: 21px;
         margin-top: 18px;
-        width: 293px;
+        max-width: 293px;
         &--until{
             @extend %inter-regular;
             @extend %color-bold;
