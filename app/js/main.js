@@ -12,7 +12,6 @@ function f_acc(){
     $(this).next().slideToggle(500);
 }
 
-
 //*****************************************************************/ 
 
 // Убавляем кол-во по клику
@@ -42,10 +41,12 @@ $('.availability__check-inner .availability__check-quantity').bind("change keyup
   }    
 });
 
+
+
 $("input").on("change", function() {
   this.setAttribute(
       "data-date",
-      moment(this.value, "YYYY-MM-DD")
+      moment.utc(this.value, "YYYY-MM-DD")
       .format( this.getAttribute("data-date-format"))
   )
 });
@@ -64,8 +65,34 @@ $('.slider__items').slick({
   variableWidth: true,
   prevArrow: "<img src='/images/slider-arrow-prev.svg' class='slider__arrow-prev' alt='prev'>",
   nextArrow: "<img src='/images/slider-arrow-next.svg' class='slider__arrow-next' alt='next'>",
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        arrows:false,
+        settings: "slick"
+      }
+    }
+  ]
 });
 
 });
 
+const mediaQuery = window.matchMedia('(max-width: 480px)')
 
+if (mediaQuery.matches) {
+$('#aboutBtn').on('click', function(){
+  $(".about__service-second--mobile").slideToggle(500);
+  $(".about__service-third--mobile").slideToggle(500);
+});
+
+$('#propertyBtn').on('click', function(){
+  $(".property__item-second--mobile").slideToggle(500);
+  $(".property__item-third--mobile").slideToggle(500);
+});
+
+$('#rulesBtn').on('click', function(){
+  $(".rules__part-second--mobile").slideToggle(500);
+  $(".rules__part-third--mobile").slideToggle(500);
+});
+}

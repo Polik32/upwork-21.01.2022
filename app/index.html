@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     <link rel="stylesheet" href="css/style.min.css">
@@ -18,8 +19,8 @@
             </a>
             <form class="header__form">
                 <input class="header__form-location" type="text" placeholder="Start typing..." value="Philadelphia">
-                <input class="header__form-from" type="date" data-date="Aug 25" data-date-format="MMM DD">
-                <input class="header__form-by" type="date" data-date="Aug 29" data-date-format="MMM DD">
+                <input class="header__form-from" type="date" data-date="Aug 25" data-date-format="DD MMM">
+                <input class="header__form-by" type="date" data-date="Aug 29" data-date-format="DD MMM">
                 <input class="header__form-guests" type="number" placeholder="Guests">
                 <button class="header__form-btn"></button>
             </form>
@@ -30,7 +31,7 @@
     </div>
 </header>
 <section class="apartment">
-    <div class="container">
+    <div class="container container-apartment-mobile">
         <div class="apartment__images">
             <a class="apartment__images-first" data-fancybox="gallery-a" href="images/content/location-photo-1.png">
                 <img class="apartment__images-first" src="images/content/location-photo-1.png" alt="image">
@@ -104,6 +105,7 @@
                 <p class="apartment__price-info">night</p>
             </div>                
         </div>
+        <button class="apartment__back-btn--mobile"></button>
     </div>
 </section>
 <section class="features">
@@ -155,6 +157,9 @@
                 <p class="about__text">The property is situated 800 m from Rembrandtplein and 750 m from Rijksmuseum.
                                        Schiphol Airport is about 14.5 km away. This is our guests' favourite part of Amsterdam,
                                        according to independent reviews.</p>
+                <p class="about__text--mobile">Along with conventional advertising and below the line activities,
+                                              organizations and corporate bodies have come to realize that they
+                                              need to invest in trade shows in order to create.</p>
                 </div>    
                 <div class="about__services">
                     <div class="about__service-wrapper">
@@ -179,7 +184,7 @@
                         </p>
                     </div>
                     </div>
-                    <div class="about__service-wrapper">
+                    <div class="about__service-wrapper about__service-second--mobile">
                     <div class="about__service-item">
                         <p class="about__service-laptop">
                             Laptop-friendly
@@ -201,7 +206,7 @@
                         </p>
                     </div>
                     </div>
-                    <div class="about__service-wrapper">
+                    <div class="about__service-wrapper about__service-third--mobile">
                     <div class="about__service-item">
                         <p class="about__service-restaurant">
                             Restaurant
@@ -224,7 +229,7 @@
                     </div>
                     </div>
                 </div>
-                <button class="about__btn">All amenities</button>
+                <button id="aboutBtn" class="about__btn about__btn--mobile">All amenities</button>
             </div>
             <div class="about__map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24459.661164418612!2d-75.16385531789338!3d39.97587704505746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c7dce17f8e79%3A0x21f34ac2a973d9a0!2zMTcxNSBXIEplZmZlcnNvbiBTdCwgUGhpbGFkZWxwaGlhLCBQQSAxOTEyMSwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1643017734732!5m2!1suk!2sua" width="361" height="504" style="border-radius:10px; border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -239,8 +244,9 @@
             <h4 class="property__title">Property surroundings</h4>
             <p class="property__text">Guests loved walking around the neighbourhood! The property is situated 800 m from Rembrandtplein and 750 m from Rijksmuseum.
                                       Schiphol Airport is about 14.5 km away. This is our guests' favourite part of Amsterdam, according to independent reviews.</p>
+            <p class="property__text--mobile">Guests loved walking around the neighbourhood! The property is situated 800 m from Rembrandtplein and 750 m from Rijksmuseum.</p>
             <div class="property__items">
-                <div class="property__item">
+                <div class="property__item property__item-first--tablet">
                     <div class="property__item-title">
                         <p class="property__item-nearby">What's nearby</p>
                     </div>
@@ -271,7 +277,7 @@
                        </li>
                     </ul>
                 </div>
-                <div class="property__item">
+                <div class="property__item property__item-second--tablet property__item-second--mobile">
                     <div class="property__item-title">
                         <p class="property__item-attractions">Top attractions</p>
                     </div>
@@ -294,7 +300,7 @@
                        </li>
                     </ul>
                 </div>
-                <div class="property__item">
+                <div class="property__item property__item-third--mobile">
                     <div class="property__item-title">
                         <p class="property__item-stores">Stores and transports</p>
                     </div>
@@ -322,12 +328,14 @@
                     </ul>
                 </div>
             </div>
+            <button id="propertyBtn" class="property__btn--mobile">All surroundings</button>
         </div>
      </div>   
     </div>
 </section>
 <section class="availability">
     <div class="container">
+        <div class="availability__wrap">
         <div class="availability__inner">
             <h4 class="availability__title">Availability</h4>
             <div class="availability__wrapper">
@@ -488,7 +496,8 @@
                 </div>
             </div>
           </div>
-        </div>    
+        </div> 
+      </div>   
     </div>
 </section>
 <section class="rules">
@@ -498,6 +507,7 @@
             <h4 class="rules__title">Apartment rules</h4>
             <p class="rules__text">Guests are required to show a photo identification and credit card upon check-in.
                                   Please note that all Special Requests are subject to availability and additional charges may apply.</p>
+            <p class="rules__text--mobile">Guests are required to show a photo identification and credit card upon check-in.</p>
         </div>
         <div class="rules__wrapper">
             <div class="rules__part-first">
@@ -526,7 +536,7 @@
                                                 Children aged 12 years and above are considered adults at this property.</p>
                 </div>
             </div>
-            <div class="rules__part-second">
+            <div class="rules__part-second rules__part-second--mobile">
                 <div class="rules__item">
                     <div class="rules__item-wrapperTitle">
                         <h6 class="rules__item-checkOut">Check-out</h6>
@@ -551,7 +561,7 @@
                     <p class="rules__item-text">There is no capacity for extra beds and cots at this property.</p>
                 </div>
             </div>
-            <div class="rules__part-third">
+            <div class="rules__part-third rules__part-third--mobile">
                 <div class="rules__item">
                     <div class="rules__item-wrapperTitle">
                         <h6 class="rules__item-cards">Cards accepted at this hotel</h6>
@@ -572,6 +582,7 @@
                 </div>
             </div>
         </div>
+        <button id="rulesBtn" class="rules__btn--mobile">All rules</button>
       </div>
     </div>
 </section>
@@ -580,6 +591,7 @@
         <div class="reviews__inner-wrap">
         <div class="reviews__inner">
             <h4 class="reviews__title">Latest reviews</h4>
+            <h4 class="reviews__title--mobile">Reviews</h4>
             <div class="reviews__wrapper">
             <div class="reviews__comments">
                 <div class="comment">
@@ -763,6 +775,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<section class="select-dates">
+    <div class="container">
+        <div class="select-dates__inner">
+            <div class="apartment__price select-dates__price">
+                <p class="apartment__price-value">$35</p>
+                <p class="apartment__price-info">night</p>
+            </div>   
+            <button class="select-dates__btn">Select dates</button>
         </div>
     </div>
 </section>
