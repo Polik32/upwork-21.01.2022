@@ -1,4 +1,3 @@
-
 $(function() {
 	$('.availability__title-wrap').on('change', f_acc);
 });
@@ -50,8 +49,8 @@ $('.slider__items').slick({
   slidesToScroll: 1,
   dots: false,
   variableWidth: true,
-  prevArrow: "<img src='/images/slider-arrow-prev.svg' class='slider__arrow-prev' alt='prev'>",
-  nextArrow: "<img src='/images/slider-arrow-next.svg' class='slider__arrow-next' alt='next'>",
+  prevArrow: "<img src='images/slider-arrow-prev.svg' class='slider__arrow-prev' alt='prev'>",
+  nextArrow: "<img src='images/slider-arrow-next.svg' class='slider__arrow-next' alt='next'>",
   responsive: [
     {
       breakpoint: 1025,

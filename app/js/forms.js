@@ -4,12 +4,12 @@ $(".sign__form-confirm").on("keyup", function() {
 
     if(value_input1 != value_input2) {
     var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#confirm:before {background-image: url(../images/signUp/confirm-icon-error.svg);}";
+    styleElem.innerHTML = "#confirm:before {background-image: url(./images/signUp/confirm-icon-error.svg);}";
     $("#submit").attr("disabled", "disabled");
 
     } else {
         var styleElem = document.head.appendChild(document.createElement("style"));
-        styleElem.innerHTML = "#confirm:before {background-image: url(../images/signUp/confirm-icon-checked.svg);}";
+        styleElem.innerHTML = "#confirm:before {background-image: url(./images/signUp/confirm-icon-checked.svg);}";
         $("#submit").removeAttr("disabled");
     }
 });
@@ -21,12 +21,12 @@ $(".sign__form-recovery").on("keyup", function() {
 
     if(reg.test(value_input) == false) {
     var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = "#recovery:after {background-image: url(../images/signUp/confirm-icon-error.svg);}";
+    styleElem.innerHTML = "#recovery:after {background-image: url(./images/signUp/confirm-icon-error.svg);}";
     $("#submit").attr("disabled", "disabled");
 
     } else { 
         var styleElem = document.head.appendChild(document.createElement("style"));
-        styleElem.innerHTML = "#recovery:after {background-image: url(../images/signUp/confirm-icon-checked.svg);}";
+        styleElem.innerHTML = "#recovery:after {background-image: url(./images/signUp/confirm-icon-checked.svg);}";
         $("#submit").removeAttr("disabled");
     }
 });

@@ -235,7 +235,7 @@
       }
       &__forms-checkbox:checked+label::before {
         background-color: #C6D8D3;
-        background-image: url("../images/signUp/checked.png");
+        background-image: url("./images/signUp/checked.png");
         background-repeat: no-repeat;
         background-position-x: 53%;
         background-position-y: 54%;
@@ -323,8 +323,6 @@
             }
         }
     }
-
-
     &__form-passwordImg--signin{
         position: relative;
         &::after{
@@ -358,7 +356,6 @@
             }
         }
     }
-
     &__form-recoveryImg{
         position: relative;
         &::after{
