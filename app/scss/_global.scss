@@ -47,18 +47,8 @@ input[type="number"]:focus {
     -moz-appearance: number-input;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 input:focus::-webkit-input-placeholder { color:transparent; }
 
 a[data-fancybox] img {
 	cursor: zoom-in;
   }
-  
-// input[type="date"]::-webkit-calendar-picker-indicator {
-// 	opacity: 0;
-//   }
