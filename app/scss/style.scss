@@ -82,23 +82,6 @@
             cursor: pointer;
         }
 
-        
-
-        // &::-moz-datetime-edit,
-        // &::-moz-inner-spin-button,
-        // &::-moz-clear-button{
-        //     display: none;
-        // }
-        // &::-moz-calendar-picker-indicator{
-        //     position: absolute;
-        //     top: -3px;
-        //     right: 0;
-        //     opacity: 1;
-        //     content: url(../images/calendar-icon.svg);
-        //     width: 18px;
-        //     height: 18px;
-        //     cursor: pointer;
-        // }
     }
     &__form-from{
         left: 0;
@@ -2022,10 +2005,6 @@
         height: 100%;
     }
 }
-
-
-
-
 
 @import 'forms';
 @import 'media-forms';

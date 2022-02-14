@@ -7,8 +7,6 @@ function f_acc(){
     $(this).next().slideToggle(500);
 }
 
-//*****************************************************************/ 
-
 $('.availability__check-inner .availability__check-btminus').on('click', function() {
   let $input = $(this).parent().find('.availability__check-quantity');
   let count = parseInt($input.val()) - 1;
@@ -34,7 +32,6 @@ $('.availability__check-inner .availability__check-quantity').bind("change keyup
   }    
 });
 
-
 $("input").on("change", function() {
   this.setAttribute(
       "data-date",
@@ -43,12 +40,10 @@ $("input").on("change", function() {
   )
 });
 
-
 var countImg = $(".base-img").children().length;
 document.getElementById("base-img").innerHTML = '+ ' + countImg + ' photos';
 
 $(function(){
-
 $('.slider__items').slick({
   infinite: true,
   slidesToShow: 3,
@@ -67,7 +62,6 @@ $('.slider__items').slick({
     }
   ]
 });
-
 });
 
 const mediaQuery = window.matchMedia('(max-width: 480px)')
